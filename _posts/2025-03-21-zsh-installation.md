@@ -109,7 +109,7 @@ Tips! .zshrc 파일을 열었을 때 다 흰색으로 나와서 뭐가 뭔지 �
 
 > **Tips!** 만약 다시 세팅하고 싶다면 `p10k configure` 명령어를 통해 재설정하고 기존에 생성된 설정 파일에 overwrite 하면 된다.
 
-![Reset Powerlevel10k](\assets\img\resetting-powerlevel10k.png)
+![Reset Powerlevel10k](/assets/img/resetting-powerlevel10k.png)
 
 <br>
 
@@ -123,7 +123,7 @@ Oh-My-Zsh과 관련된 유용한 플러그인이 있다.
 ### zsh-syntax-highlighting
 
 
-![Before highlighting](\assets\img\sudo-apt-install-no-color.png)
+![Before highlighting](/assets/img/sudo-apt-install-no-color.png)
 
 
 ### zsh-autosuggestions
