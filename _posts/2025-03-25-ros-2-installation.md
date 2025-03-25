@@ -130,25 +130,12 @@ ROS 2 패키지 외에 개발에 필요한 패키지들을 설치한다.
 ```bash
 sudo apt update && sudo apt install -y build-essential cmake git libbullet-dev python3-colcon-common-extensions python3-flake8 python3-pip python3-pytest-cov python3-rosdep python3-setuptools python3-vcstool wget python3-argcomplete
 python3 -m pip install -U flake8-blind-except flake8-builtins flake8-class-newline flake8-comprehensions flake8-deprecated flake8-docstrings flake8-import-order flake8-quotes pytest-repeat pytest-rerunfailures pytest
-```
-
-<br>
-
-![Install other packages](/assets/img/2025-03-25/install-other-packages-1.png)|![Install other packages](/assets/img/2025-03-25/install-other-packages-2.png)
-
-<br>
-
-마지막으로 없는 패키지들 일부만 설치하면 ROS 2 설치가 완료된다.
-
-<br>
-
-```bash
 sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcunit1-dev
 ```
 
 <br>
 
-![Install other packages](/assets/img/2025-03-25/install-other-packages-3.png)
+![Install other packages](/assets/img/2025-03-25/install-other-packages-1.png)|![Install other packages](/assets/img/2025-03-25/install-other-packages-2.png)|![Install other packages](/assets/img/2025-03-25/install-other-packages-3.png)
 
 <br>
 
