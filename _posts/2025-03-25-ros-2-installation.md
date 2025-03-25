@@ -123,7 +123,8 @@ sudo apt install ros-dev-tools
 
 <br>
 
-ROS 2 패키지 외에 개발에 필요한 패키지들을 설치한다.
+ROS 2 패키지 외에 개발에 필요한 패키지들을 설치한다.  
+(참고 사이트: https://reactive-effect.tistory.com/116)
 
 <br>
 
