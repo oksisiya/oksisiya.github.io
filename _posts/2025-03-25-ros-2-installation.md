@@ -1,5 +1,5 @@
 ---
-title: ROS 2 Humble 설치
+title: "[ROS 2] ROS 2 Humble 설치"
 date: 2025-03-25
 categories: ROS
 ---
