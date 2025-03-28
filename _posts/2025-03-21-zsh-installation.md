@@ -32,7 +32,7 @@ chsh -s $(which zsh)
 
 <br>
 
-![Warning](/assets/img/warning.png)
+![Warning](/assets/img/2025-03-21/warning.png)
 
 <br>
 
@@ -52,7 +52,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 <br>
 
-![Shell to Zsh](/assets/img/shell-to-zsh.png)|![Oh-My-Zsh](/assets/img/oh-my-zsh.png)
+![Shell to Zsh](/assets/img/2025-03-21/shell-to-zsh.png)|![Oh-My-Zsh](/assets/img/2025-03-21/oh-my-zsh.png)
 
 <br>
 
@@ -60,7 +60,7 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 
 <br>
 
-![No warning](/assets/img/no-warning.png)
+![No warning](/assets/img/2025-03-21/no-warning.png)
 
 <br>
 
@@ -83,7 +83,7 @@ Powerlevel10k 깃허브 리포지토리 > Fonts > MesloLGS NF Regular.ttf 폰트
 
 <br>
 
-![Fonts repository](/assets/img/repository-fonts.png)
+![Fonts repository](/assets/img/2025-03-21/repository-fonts.png)
 
 <br>
   
@@ -91,7 +91,7 @@ Downloads 디렉토리에서 다운로드한 파일을 열어 Install 클릭 후
 
 <br>
 
-![Downloads](/assets/img/downloads.png)|![Before installing font](/assets/img/install-font-before.png)|![After installing font](/assets/img/install-font-after.png)
+![Downloads](/assets/img/2025-03-21/downloads.png)|![Before installing font](/assets/img/2025-03-21/install-font-before.png)|![After installing font](/assets/img/2025-03-21/install-font-after.png)
 
 <br>
 
@@ -99,7 +99,7 @@ Downloads 디렉토리에서 다운로드한 파일을 열어 Install 클릭 후
 
 <br>
 
-![Terminator preferences](/assets/img/terminator-preferences.png)|![Terminator preferences changed](/assets/img/terminator-preferences-done.png)
+![Terminator preferences](/assets/img/2025-03-21/terminator-preferences.png)|![Terminator preferences changed](/assets/img/2025-03-21/terminator-preferences-done.png)
 
 <br>
 
@@ -107,7 +107,7 @@ Downloads 디렉토리에서 다운로드한 파일을 열어 Install 클릭 후
 
 <br>
 
-![No Font File](/assets/img/no-font-file.png)|![Yes Font File](/assets/img/yes-font-file.png)
+![No Font File](/assets/img/2025-03-21/no-font-file.png)|![Yes Font File](/assets/img/2025-03-21/yes-font-file.png)
 
 <br>
 
@@ -126,7 +126,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-
 
 <br>
 
-![Install powerlevel10k](/assets/img/install-powerlevel10k.png)|![Install powerlevel10k done](/assets/img/install-powerlevel10k-done.png)
+![Install powerlevel10k](/assets/img/2025-03-21/install-powerlevel10k.png)|![Install powerlevel10k done](/assets/img/2025-03-21/install-powerlevel10k-done.png)
 
 <br>
 
@@ -138,7 +138,7 @@ Home 디렉토리에서 숨김 파일 해제 후(`Ctrl + H`) Zsh의 기본 설�
 
 <br>
 
-![Home directory](/assets/img/home-directory.png)|![Home directory hidden](/assets/img/home-directory-hidden.png)
+![Home directory](/assets/img/2025-03-21/home-directory.png)|![Home directory hidden](/assets/img/2025-03-21/home-directory-hidden.png)
 
 <br>
 
@@ -146,7 +146,7 @@ Home 디렉토리에서 숨김 파일 해제 후(`Ctrl + H`) Zsh의 기본 설�
 
 <br>
 
-![Plain text](/assets/img/plain-text.png)|![Plain text setting](/assets/img/plain-text-setting.png)|![Plain text to sh](/assets/img/plain-text-to-sh.png)
+![Plain text](/assets/img/2025-03-21/plain-text.png)|![Plain text setting](/assets/img/2025-03-21/plain-text-setting.png)|![Plain text to sh](/assets/img/2025-03-21/plain-text-to-sh.png)
 
 
 <br>
@@ -155,7 +155,7 @@ Home 디렉토리에서 숨김 파일 해제 후(`Ctrl + H`) Zsh의 기본 설�
 
 <br>
 
-![robbyrussell](/assets/img/robbyrussell.png)|![robbyrussell-to-powerlevel10k](/assets/img/robbyrussell-powerlevel10k.png)
+![robbyrussell](/assets/img/2025-03-21/robbyrussell.png)|![robbyrussell-to-powerlevel10k](/assets/img/2025-03-21/robbyrussell-powerlevel10k.png)
 
 <br>
 
@@ -163,7 +163,7 @@ Home 디렉토리에서 숨김 파일 해제 후(`Ctrl + H`) Zsh의 기본 설�
 
 <br>
 
-![Check font 1](/assets/img/check-font-1.png)|![Check font 2](/assets/img/check-font-2.png)| ![Check font 3](/assets/img/check-font-3.png)| ![Check font 4](/assets/img/check-font-4.png)|![Check font 5](/assets/img/check-font-5.png)
+![Check font 1](/assets/img/2025-03-21/check-font-1.png)|![Check font 2](/assets/img/2025-03-21/check-font-2.png)| ![Check font 3](/assets/img/2025-03-21/check-font-3.png)| ![Check font 4](/assets/img/2025-03-21/check-font-4.png)|![Check font 5](/assets/img/2025-03-21/check-font-5.png)
 
 <br>
 
@@ -171,7 +171,7 @@ Home 디렉토리에서 숨김 파일 해제 후(`Ctrl + H`) Zsh의 기본 설�
 
 <br>
 
-![Rainbow](/assets/img/rainbow.png)|![Rainbow>Unicode](/assets/img/rainbow-unicode.png)
+![Rainbow](/assets/img/2025-03-21/rainbow.png)|![Rainbow>Unicode](/assets/img/2025-03-21/rainbow-unicode.png)
 
 <br>
 
@@ -179,7 +179,7 @@ Home 디렉토리에서 숨김 파일 해제 후(`Ctrl + H`) Zsh의 기본 설�
 
 <br>
 
-![Resetting](/assets/img/resetting-powerlevel10k.png)|![Before resetting](/assets/img/resetting-powerlevel10k-before.png)|![After resetting](/assets/img/resetting-powerlevel10k-after.png)
+![Resetting](/assets/img/2025-03-21/resetting-powerlevel10k.png)|![Before resetting](/assets/img/2025-03-21/resetting-powerlevel10k-before.png)|![After resetting](/assets/img/2025-03-21/resetting-powerlevel10k-after.png)
 
 <br>
 
@@ -193,7 +193,7 @@ Zsh 사용과 관련된 몇 가지 유용한 플러그인이 있다. 지금은 �
 
 <br>
 
-![Before setting](/assets/img/sudo-apt-install-no-color.png)
+![Before setting](/assets/img/2025-03-21/sudo-apt-install-no-color.png)
 
 
 ### 4-1. zsh-syntax-highlighting
@@ -210,7 +210,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 <br>
 
-![Install highlighting](/assets/img/install-highlighting.png)|![After highlighting](/assets/img/install-highlighting-before-setting.png)
+![Install highlighting](/assets/img/2025-03-21/install-highlighting.png)|![After highlighting](/assets/img/2025-03-21/install-highlighting-before-setting.png)
 
 <br>
 
@@ -232,7 +232,7 @@ zsh-syntax-highlighting과 마찬가지로 설치 후 적용하지 않았기 때
 
 <br>
 
-![Install highlighting](/assets/img/install-autosuggestions.png)|![After highlighting](/assets/img/install-autosuggestions-before-setting.png)
+![Install highlighting](/assets/img/2025-03-21/install-autosuggestions.png)|![After highlighting](/assets/img/2025-03-21/install-autosuggestions-before-setting.png)
 
 <br>
 
@@ -240,7 +240,7 @@ zsh-syntax-highlighting과 마찬가지로 설치 후 적용하지 않았기 때
 
 <br>
 
-![Before setting .zshrc](/assets/img/setting-zshrc-plugin-before.png)|![After setting .zshrc](/assets/img/setting-zshrc-plugin-after.png)
+![Before setting .zshrc](/assets/img/2025-03-21/setting-zshrc-plugin-before.png)|![After setting .zshrc](/assets/img/2025-03-21/setting-zshrc-plugin-after.png)
 
 <br>
 
@@ -249,7 +249,7 @@ zsh-syntax-highlighting과 마찬가지로 설치 후 적용하지 않았기 때
 
 <br>
 
-![After setting](/assets/img/sudo-apt-install-color.png)
+![After setting](/assets/img/2025-03-21/sudo-apt-install-color.png)
 
 &nbsp;
 
