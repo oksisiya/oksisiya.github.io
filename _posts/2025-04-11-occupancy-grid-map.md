@@ -19,7 +19,7 @@ use_math: true
 
 <br>
 
-점유 격자 지도는 공간을 셀(cell)로 나누어 표현한다. 각각의 셀은 센서 데이터를 바탕으로 셀의 상태를 나타내는 확률 값을 갖는다. 셀은 점유되거나(occupied) 비어 있을(free) 수 있다. 아래 그림[[2]](https://journals.sagepub.com/doi/abs/10.1177/0278364918775523)[[3]](https://jinyongjeong.github.io/2017/02/21/lec10_Grid_map/)은 이를 나타낸다.
+점유 격자 지도는 공간을 셀(cell)로 나누어 표현한다. 각각의 셀은 센서 데이터를 바탕으로 셀의 상태를 나타내는 확률 값을 갖는다. 셀은 점유되거나(occupied) 비어 있을(free) 수 있다. 아래 그림[[2]](https://journals.sagepub.com/doi/abs/10.1177/0278364918775523), [[3]](https://jinyongjeong.github.io/2017/02/21/lec10_Grid_map/)은 이를 나타낸다.
 
 <br>
 
