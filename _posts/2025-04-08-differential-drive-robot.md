@@ -1,7 +1,7 @@
 ---
-title: "[SLAM] Differential Drive Robot and Encoder"
+title: "Differential Drive Robot and Encoder"
 date: 2025-04-08 14:31:00 +0900
-categories: SLAM
+categories: Robotics
 ---
 
 &nbsp;
@@ -38,7 +38,7 @@ categories: SLAM
 
 <br>
 
-차동 구동 로봇의 움직임을 추정하려면 모터로부터 피드백을 받아야 한다. 이때 엔코더(encorder)를 사용한다. 모터의 펄스 신호를 통해 모터의 회전 방향은 제어할 수 있지만 회전량을 파악할 수는 없다. 엔코더를 모터에 부착해 사용하면 모터의 회전량을 구할 수 있다.
+차동 구동 로봇의 움직임을 추정하려면 모터로부터 피드백을 받아야 한다. 이때 엔코더(encorder)를 사용한다. 모터의 펄스(pulse) 신호를 통해 모터의 회전 방향은 제어할 수 있지만 회전량을 파악할 수는 없다. 엔코더를 모터에 부착해 사용하면 모터의 회전량을 구할 수 있다.
 
 <br>
 
@@ -58,7 +58,7 @@ categories: SLAM
 
 <br>
 
-엔코더의 단위는 PPR(pulses per revolution)로, 분해능(resolution)이라고도 한다. 디스크가 한 바퀴 회전할 때 몇 개의 펄스(pulse)를 셀 수 있는지를 나타낸다. 예를 들어, 어떤 엔코더의 사양 중 분해능이 334 [PPR]이라면 엔코더의 디스크에 334개의 구멍이 뚫려있다는 것을 의미한다. 분해능이 높을수록 감지할 수 있는 위치가 많아 정밀한 제어가 가능하고, 분해능이 낮을수록 러프한 제어가 가능하다 [[4]](https://minji11203.tistory.com/29).
+엔코더의 단위는 PPR(pulses per revolution)로, 분해능(resolution)이라고도 한다. 디스크가 한 바퀴 회전할 때 몇 개의 펄스를 셀 수 있는지를 나타낸다. 예를 들어, 어떤 엔코더의 사양 중 분해능이 334 [PPR]이라면 엔코더의 디스크에 334개의 구멍이 뚫려있다는 것을 의미한다. 분해능이 높을수록 감지할 수 있는 위치가 많아 정밀한 제어가 가능하고, 분해능이 낮을수록 러프한 제어가 가능하다 [[4]](https://minji11203.tistory.com/29).
 
 <br>
 
