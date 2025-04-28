@@ -42,7 +42,7 @@ $$\textbf{p}=(p_x, p_y)$$
 
 <br>
 
-![2D coordinates frame](/assets/img/2025-04-07/2d-coordinates-frame.png)|![2D robot](/assets/img/2025-04-07/robot-2d.svg)
+![2D coordinates frame](/assets/img/2025-04-07/2d-coordinates-frame.png)|![2D robot](/assets/img/2025-04-07/robot-2d.png)
 
 <br>
 
