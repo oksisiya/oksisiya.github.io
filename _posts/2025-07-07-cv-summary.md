@@ -14,10 +14,10 @@ categories: CV
 
 <br>
 
-* [ ] SuperPoint: Self-Supervised Interest Point Detection and Description
+* [ ]  SuperPoint: Self-Supervised Interest Point Detection and Description
 <br>(<https://arxiv.org/abs/1712.07629>)
 
-* [ ] DISK: Learning local features with policy gradient
+* [ ]  DISK: Learning local features with policy gradient
 <br>(<https://arxiv.org/abs/2006.13566>)
 
 <br>
