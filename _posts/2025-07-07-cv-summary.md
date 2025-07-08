@@ -28,6 +28,16 @@ categories: CV
 
 <br>
 
+* [ ] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
+<br>(<https://arxiv.org/abs/1810.04805?source=post_page>)
+
+<br>
+
+* [ ] Improving Language Understanding by Generative Pre-Training
+<br>(<https://cdn.openai.com/research-covers/language-unsupervised/language_understanding_paper.pdf>)
+
+<br>
+
 ### Transformer Model for Vision
 
 <br>
