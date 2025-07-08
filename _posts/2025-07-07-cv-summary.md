@@ -20,6 +20,28 @@ categories: CV
 * [ ] DISK: Learning local features with policy gradient
 <br>(<https://arxiv.org/abs/2006.13566>)
 
+## Multi Modal
+
+<br>
+
+### Transformer Model for Language
+
+<br>
+
+### Transformer Model for Vision
+
+<br>
+
+* [ ] An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale
+<br>(<https://arxiv.org/abs/2010.11929>)
+
+<br>
+
+### Multi Modal Model
+
+<br>
+
+
 <br>
 
 ---
