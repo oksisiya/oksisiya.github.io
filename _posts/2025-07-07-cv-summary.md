@@ -10,6 +10,10 @@ categories: CV
 
 <br>
 
+---
+
+<br>
+
 ## 3D Computer Vision
 
 <br>
@@ -17,8 +21,16 @@ categories: CV
 * [ ] SuperPoint: Self-Supervised Interest Point Detection and Description
 <br>(<https://arxiv.org/abs/1712.07629>)
 
+<br>
+
 * [ ] DISK: Learning local features with policy gradient
 <br>(<https://arxiv.org/abs/2006.13566>)
+
+<br>
+
+---
+
+<br>
 
 ## Multi Modal
 
@@ -51,6 +63,7 @@ categories: CV
 
 <br>
 
+---
 
 <br>
 
