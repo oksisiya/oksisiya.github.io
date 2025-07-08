@@ -1,5 +1,5 @@
 ---
-title: "Summary"
+title: "Computer Vision Summary"
 date: 2025-07-07 16:57:00 +0900
 categories: CV
 ---
