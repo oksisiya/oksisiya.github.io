@@ -44,6 +44,7 @@ categories: CV
 |CLIP|Text, Image|
 |BLIP||
 |Flamingo||
+|LLaVA||
 
 <br>
 
@@ -95,6 +96,11 @@ categories: CV
 
 * [ ] Flamingo: a Visual Language Model for Few-Shot Learning
 <br>(<https://arxiv.org/abs/2204.14198>)
+
+<br>
+
+* [ ] Visual Instruction Tuning
+<br>(<https://arxiv.org/abs/2304.08485>)
 
 <br>
 
