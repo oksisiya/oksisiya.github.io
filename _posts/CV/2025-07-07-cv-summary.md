@@ -86,6 +86,16 @@ categories: CV
 
 <br>
 
+* [ ] BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation
+<br>(<https://arxiv.org/abs/2201.12086>)
+
+<br>
+
+* [ ] Flamingo: a Visual Language Model for Few-Shot Learning
+<br>(<https://arxiv.org/abs/2204.14198>)
+
+<br>
+
 ### Vision Language Action Model
 
 <br>
