@@ -36,6 +36,15 @@ categories: CV
 
 <br>
 
+|Model|Modality|
+|---|---|
+|BERT|Text|
+|GPT|Text|
+|VIT|Image|
+|CLIP|Text, Image|
+
+<br>
+
 ### Transformer Model for Language
 
 <br>
@@ -60,6 +69,16 @@ categories: CV
 <br>
 
 ### Multi Modal Model
+
+<br>
+
+* [ ] Learning Transferable Visual Models From Natural Language Supervision
+<br>(<https://arxiv.org/abs/2103.00020>)
+
+<br>
+
+* [ ] LAION-5B: An open large-scale dataset for training next generation image-text models
+<br>(<https://arxiv.org/abs/2210.08402>)
 
 <br>
 
