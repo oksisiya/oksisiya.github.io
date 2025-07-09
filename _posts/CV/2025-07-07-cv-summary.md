@@ -42,6 +42,8 @@ categories: CV
 |GPT|Text|
 |VIT|Image|
 |CLIP|Text, Image|
+|BLIP||
+|Flamingo||
 
 <br>
 
