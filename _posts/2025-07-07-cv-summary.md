@@ -63,6 +63,14 @@ categories: CV
 
 <br>
 
+### Vision Language Model
+
+<br>
+
+### Vision Language Action Model
+
+<br>
+
 ---
 
 <br>
