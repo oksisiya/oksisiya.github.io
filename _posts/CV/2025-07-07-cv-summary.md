@@ -87,7 +87,7 @@ categories: CV
 <br>
 
 * [ ] End-to-End Object Detection with Transformers
-<br> (https://arxiv.org/abs/2005.12872<>)
+<br> (<https://arxiv.org/abs/2005.12872>)
 
 <br>
 
