@@ -43,6 +43,7 @@ categories: CV
 |VIT|Image|
 |CLIP|Text, Image|
 |BLIP||
+|BLIP-2||
 |Flamingo||
 |LLaVA||
 
@@ -91,6 +92,11 @@ categories: CV
 
 * [ ] BLIP: Bootstrapping Language-Image Pre-training for Unified Vision-Language Understanding and Generation
 <br>(<https://arxiv.org/abs/2201.12086>)
+
+<br>
+
+* [ ] BLIP-2: Bootstrapping Language-Image Pre-training with Frozen Image Encoders and Large Language Models
+<br>(<https://arxiv.org/abs/2301.12597>)
 
 <br>
 
