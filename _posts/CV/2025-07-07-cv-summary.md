@@ -36,16 +36,16 @@ categories: CV
 
 <br>
 
-|Model|Modality|
-|---|---|
-|BERT|Text|
-|GPT|Text|
-|VIT|Image|
-|CLIP|Text, Image|
-|BLIP||
-|BLIP-2||
-|Flamingo||
-|LLaVA||
+|Model|Modality||
+|---|---||
+|BERT|Text||
+|GPT|Text||
+|VIT|Image||
+|CLIP|Text, Image|Text Encoder: Tokenizer(GPT like), transformer <br> Image Encoder: ViT|
+|BLIP|||
+|BLIP-2|||
+|Flamingo|||
+|LLaVA|||
 
 <br>
 
