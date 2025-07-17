@@ -6,7 +6,7 @@ categories: CV
 
 &nbsp;
 
-![cosine similarity from paper](assets\img\2025-07-16-cv-clip-inference\cosine_similarity_from_paper.png)
+![cosine similarity from paper](assets\img\2025-07-17\cosine_similarity_from_paper.png)
 
 <br>
 
@@ -25,7 +25,7 @@ Hugging Face(🤗)에 있는 모델과 데이터셋을 사용한다.
 
 <br>
 
-![wds_imagenetv2](assets\img\2025-07-16-cv-clip-inference\wds_imagentv2.png)
+![wds_imagenetv2](assets\img\2025-07-17\wds_imagenetv2.png)
 
 <br>
 
@@ -100,7 +100,7 @@ similarity_matrix = cosine_similarity(image_embeddings.cpu().numpy(), text_embed
 
 <br>
 
-![cosine similarity](assets\img\2025-07-16-cv-clip-inference\cosine_similarity.png)
+![cosine similarity](assets\img\2025-07-17\cosine_similarity.png)
 
 <br>
 
