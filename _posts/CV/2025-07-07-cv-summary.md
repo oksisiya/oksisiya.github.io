@@ -32,7 +32,7 @@ categories: CV
 
 <br>
 
-## Multi Modal
+## Multi-Modal
 
 <br>
 
@@ -40,9 +40,9 @@ categories: CV
 ||---|---||
 ||BERT|Text||
 ||GPT|Text||
-||Vision Transformer(ViT)|Image||
+||ViT|Image||
 |26 Feb 2021|**CLIP**|Text + Image|Text Encoder: Tokenizer(GPT like), transformer <br> Image Encoder: ViT|
-|17 Aug 2021|Swin Transformer(SwinT)|||
+|17 Aug 2021|SwinT|||
 |19 Jul 2024|**Grounding DINO**|Text + Image|Text Encoder: BERT <br> Image Encoder: SwinT|
 ||BLIP|||
 ||BLIP-2|||
