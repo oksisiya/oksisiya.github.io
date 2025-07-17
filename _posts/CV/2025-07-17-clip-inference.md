@@ -10,19 +10,11 @@ categories: CV
 
 <br>
 
-## Zero-Shot Classification
+## Model & Dataset
 
 <br>
 
-CLIP 논문[[1]](https://arxiv.org/abs/2103.00020)에서는 아래의 그림과 같이 이미지와 텍스트 사이의 연관성을 cosine similarity를 통해 나타낸다. 이미지 임베딩과 텍스트 임베딩을 동일한 임베딩 공간(embedding space)으로 보내고 올바른 쌍의 cosine similarity는 최대화하고 잘못된 쌍의 cosine similarity는 최소화하는 식으로 이미지 인코더와 텍스트 인코더를 학습시킨다.
-
-<br>
-
-![cosine similarity from paper](/assets/img/2025-07-17/cosine_similarity_from_paper.png)
-
-<br>
-
-모델과 데이터셋은 Hugging Face(🤗)의 `openai/clip-vit-base-patch32` 모델과 `clip-benchmark/wds_imagenetv2` 데이터셋을 사용한다. 각각의 사용법은 Hugging Face의 해당 페이지에서 Use this model/dataset을 통해 확인할 수 있다.
+모델과 데이터셋은 Hugging Face(🤗)의 `openai/clip-vit-base-patch32` 모델[[1]]()과 `clip-benchmark/wds_imagenetv2` 데이터셋[[2]]()을 사용한다. 각각의 사용법은 Hugging Face의 해당 페이지에서 Use this model/dataset을 통해 확인할 수 있다.
 * `openai/clip-vit-base-patch32`: CLIP 논문이 처음 공개되었을 당시 OpenAI에서 제공한 모델이다. 베이스 모델이고 패치 사이즈는 32이다.
 * `clip-benchmark/wds_imagenetv2`: 이미지(`webp`)와 클래스(`cls`)로 구성된 데이터 셋이다. 정수로 나타낸 클래스가 어떤 것을 나타내는지는 `classnames.txt` 파일을 통해 확인할 수 있다. 이 데이터셋은 모델의 일반화(generalization) 성능을 확인하기 위한 것으로 `test` 데이터셋만 존재한다.
 
@@ -33,6 +25,18 @@ CLIP 논문[[1]](https://arxiv.org/abs/2103.00020)에서는 아래의 그림과 
 <br>
 
 ![wds_imagenetv2](/assets/img/2025-07-17/wds_imagenetv2.png)
+
+<br>
+
+## Zero-Shot Classification
+
+<br>
+
+CLIP 논문[[3]](https://arxiv.org/abs/2103.00020)에서는 아래의 그림과 같이 이미지와 텍스트 사이의 연관성을 cosine similarity를 통해 나타낸다. 이미지 임베딩과 텍스트 임베딩을 동일한 임베딩 공간(embedding space)으로 보내고 올바른 쌍의 cosine similarity는 최대화하고 잘못된 쌍의 cosine similarity는 최소화하는 식으로 이미지 인코더와 텍스트 인코더를 학습시킨다.
+
+<br>
+
+![cosine similarity from paper](/assets/img/2025-07-17/cosine_similarity_from_paper.png)
 
 <br>
 
@@ -70,7 +74,7 @@ test_dataset = dataset["test"]
 
 <br>
 
-`from_pretrained` 함수를 통해 Hugging Face에 있는 모델을 불러온다. 모델의 인퍼런스를 위한 `test` 데이터셋을 가져온다. 모델과 데이터셋 이름은 Huggine Face 페이지에서 복사/붙여넣는다.
+`from_pretrained()` 함수를 통해 Hugging Face에 있는 모델을 불러온다. 모델의 인퍼런스를 위한 `test` 데이터셋을 가져온다.
 
 <br>
 
@@ -106,25 +110,36 @@ similarity_matrix = cosine_similarity(image_embeddings.cpu().numpy(), text_embed
 
 <br>
 
+앞서 무작위로 선택한 10장의 이미지와 텍스트 사이의 cosine similarity를 히트맵(heatmap)으로 나타냈다.
+
+<br>
+
 ![cosine similarity](/assets/img/2025-07-17/cosine_similarity.png)
 
 <br>
 
-앞서 랜덤하게 선택한 10장의 이미지와 텍스트 사이의 연관성, cosine similarity를 히트맵으로 나타냈다. 연관성이 높을수록 빨갛게 표현된다.대각선 부분이 정답이라고 할 수 있다. 이미지와 텍스트의 similarity가 높은 것들이 대각선에 위치한다.
+Cosine similarity가 클수록 두 벡터는 유사하며 히트맵 상에서 빨간색으로 표시된다. 즉, 대각선에 놓인 이미지와 텍스트는 연관성이 높다고 할 수 있다.
 
 <br>
 
-이러한 방법을 통해 CLIP 모델이 classification을 잘 수행했는지 판단할 수 있다.
+이러한 방법을 통해 CLIP 모델이 classification을 성능을 판단할 수 있다.
 
+<br>
+
+## Embedding Space Visualization
+
+<br>
+
+See you soon...
 
 <br>
 
 ---
 
 ## References
-
-[1] <https://arxiv.org/abs/2103.00020>  
-[2] <https://huggingface.co/openai/clip-vit-base-patch32>  
-[3] <https://huggingface.co/datasets/clip-benchmark/wds_imagenetv2>  
+ 
+[1] <https://huggingface.co/openai/clip-vit-base-patch32>  
+[2] <https://huggingface.co/datasets/clip-benchmark/wds_imagenetv2>  
+[3] <https://arxiv.org/abs/2103.00020>
 
 &nbsp;
