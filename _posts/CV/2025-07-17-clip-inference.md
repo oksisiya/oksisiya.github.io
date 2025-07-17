@@ -4,7 +4,7 @@ date: 2025-07-17 09:57:00 +0900
 categories: CV
 ---
 
-&nbsp;
+<!-- &nbsp;
 
 ![cosine similarity from paper](assets\img\2025-07-17\cosine_similarity_from_paper.png)
 
@@ -113,7 +113,7 @@ similarity_matrix = cosine_similarity(image_embeddings.cpu().numpy(), text_embed
 
 <br>
 
----
+--- -->
 
 ## References
 
