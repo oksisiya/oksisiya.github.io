@@ -41,6 +41,7 @@ from transformers import CLIPModel, CLIPProcessor
 from datasets import load_dataset
 ```
 
+
 <br>
 
 `CLIPModel`은 우리가 사용하고자 하는 CLIP 모델이다. `CLIPProcessor`는 데이터셋의 이미지와 텍스트를 CLIP 모델의 입력 형태로 가공한다. 가공된 데이터를 CLIP 모델에 입력하면 임베딩 스페이스 상에서 어떤 벡터 형태로 나타나는지 알 수 있다.
