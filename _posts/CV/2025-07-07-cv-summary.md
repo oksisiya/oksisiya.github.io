@@ -40,9 +40,10 @@ categories: CV
 ||---|---||
 ||BERT|Text||
 ||GPT|Text||
-||VIT|Image||
+||Vision Transformer(ViT)|Image||
 |26 Feb 2021|**CLIP**|Text + Image|Text Encoder: Tokenizer(GPT like), transformer <br> Image Encoder: ViT|
-|19 Jul 2024|**Grounding DINO**|Text + Image|Text Encoder: BERT <br> Image Encoder: SwintT|
+|17 Aug 2021|Swin Transformer(SwinT)|||
+|19 Jul 2024|**Grounding DINO**|Text + Image|Text Encoder: BERT <br> Image Encoder: SwinT|
 ||BLIP|||
 ||BLIP-2|||
 ||Flamingo|||
