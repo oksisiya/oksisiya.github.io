@@ -6,7 +6,7 @@ categories: CV
 
 &nbsp;
 
-![cosine similarity from paper](assets\img\2025-07-17\cosine_similarity_from_paper.png)
+![cosine similarity from paper](/assets/img/2025-07-17/cosine_similarity_from_paper.png)
 
 <br>
 
@@ -25,7 +25,7 @@ Hugging Face(🤗)에 있는 모델과 데이터셋을 사용한다.
 
 <br>
 
-![wds_imagenetv2](assets\img\2025-07-17\wds_imagenetv2.png)
+![wds_imagenetv2](/assets/img/2025-07-17/wds_imagenetv2.png)
 
 <br>
 
@@ -41,7 +41,6 @@ from transformers import CLIPModel, CLIPProcessor
 from datasets import load_dataset
 ```
 
-<!-- 
 <br>
 
 `CLIPModel`은 우리가 사용하고자 하는 CLIP 모델이다. `CLIPProcessor`는 데이터셋의 이미지와 텍스트를 CLIP 모델의 입력 형태로 가공한다. 가공된 데이터를 CLIP 모델에 입력하면 임베딩 스페이스 상에서 어떤 벡터 형태로 나타나는지 알 수 있다.
@@ -100,7 +99,7 @@ similarity_matrix = cosine_similarity(image_embeddings.cpu().numpy(), text_embed
 
 <br>
 
-![cosine similarity](assets\img\2025-07-17\cosine_similarity.png)
+![cosine similarity](/assets/img/2025-07-17/cosine_similarity.png)
 
 <br>
 
@@ -113,7 +112,7 @@ similarity_matrix = cosine_similarity(image_embeddings.cpu().numpy(), text_embed
 
 <br>
 
---- -->
+---
 
 ## References
 
