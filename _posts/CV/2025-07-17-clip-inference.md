@@ -1,6 +1,6 @@
 ---
 title: "CLIP Model Inference - Cosine similarity"
-date: 2025-07-16 10:35:00 +0900
+date: 2025-07-17 09:57:00 +0900
 categories: CV
 ---
 
