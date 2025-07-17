@@ -14,7 +14,7 @@ categories: CV
 
 <br>
 
-모델과 데이터셋은 Hugging Face(🤗)의 `openai/clip-vit-base-patch32` 모델[[1]]()과 `clip-benchmark/wds_imagenetv2` 데이터셋[[2]]()을 사용한다. 각각의 사용법은 Hugging Face의 해당 페이지에서 Use this model/dataset을 통해 확인할 수 있다.
+모델과 데이터셋은 Hugging Face(🤗)의 `openai/clip-vit-base-patch32` 모델[[1]](https://huggingface.co/openai/clip-vit-base-patch32)과 `clip-benchmark/wds_imagenetv2` 데이터셋[[2]](https://huggingface.co/datasets/clip-benchmark/wds_imagenetv2)을 사용한다. 각각의 사용법은 Hugging Face의 해당 페이지에서 Use this model/dataset을 통해 확인할 수 있다.
 * `openai/clip-vit-base-patch32`: CLIP 논문이 처음 공개되었을 당시 OpenAI에서 제공한 모델이다. 베이스 모델이고 패치 사이즈는 32이다.
 * `clip-benchmark/wds_imagenetv2`: 이미지(`webp`)와 클래스(`cls`)로 구성된 데이터 셋이다. 정수로 나타낸 클래스가 어떤 것을 나타내는지는 `classnames.txt` 파일을 통해 확인할 수 있다. 이 데이터셋은 모델의 일반화(generalization) 성능을 확인하기 위한 것으로 `test` 데이터셋만 존재한다.
 
