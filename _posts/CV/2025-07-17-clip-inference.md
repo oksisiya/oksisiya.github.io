@@ -1,27 +1,34 @@
 ---
-title: "CLIP Model Inference - Cosine similarity"
+title: "CLIP Model Inference"
 date: 2025-07-17 09:57:00 +0900
 categories: CV
 ---
 
 &nbsp;
 
+이번 포스팅에서는 CLIP 모델을 직접 사용해 보고 그 결과를 시각화한다.
+
+<br>
+
+## Zero-Shot Classification
+
+<br>
+
+CLIP 논문[[1]](https://arxiv.org/abs/2103.00020)에서는 아래의 그림과 같이 이미지와 텍스트 사이의 연관성을 cosine similarity를 통해 나타낸다. 이미지 임베딩과 텍스트 임베딩을 동일한 임베딩 공간(embedding space)으로 보내고 올바른 쌍의 cosine similarity는 최대화하고 잘못된 쌍의 cosine similarity는 최소화하는 식으로 이미지 인코더와 텍스트 인코더를 학습시킨다.
+
+<br>
+
 ![cosine similarity from paper](/assets/img/2025-07-17/cosine_similarity_from_paper.png)
 
 <br>
 
-논문을 보면 이미지와 텍스트 사이의 연관성을 cosine similarity를 통해 보여준다.
+모델과 데이터셋은 Hugging Face(🤗)의 `openai/clip-vit-base-patch32` 모델과 `clip-benchmark/wds_imagenetv2` 데이터셋을 사용한다. 각각의 사용법은 Hugging Face의 해당 페이지에서 Use this model/dataset을 통해 확인할 수 있다.
+* `openai/clip-vit-base-patch32`: CLIP 논문이 처음 공개되었을 당시 OpenAI에서 제공한 모델이다. 베이스 모델이고 패치 사이즈는 32이다.
+* `clip-benchmark/wds_imagenetv2`: 이미지(`webp`)와 클래스(`cls`)로 구성된 데이터 셋이다. 정수로 나타낸 클래스가 어떤 것을 나타내는지는 `classnames.txt` 파일을 통해 확인할 수 있다. 이 데이터셋은 모델의 일반화(generalization) 성능을 확인하기 위한 것으로 `test` 데이터셋만 존재한다.
 
 <br>
 
-Hugging Face(🤗)에 있는 모델과 데이터셋을 사용한다.
-
-<br>
-
-데이터셋 같은 경우 모델의 일반화 성능을 테스트 하기 위한 데이터셋이므로 Test 데이터 셋만 존재한다.
-
-
-모델과 데이터셋의 사용법은 Hugging Face의 해당 페이지에서 Use this model(or dataset)을 통해 확인할 수 있다.
+![dataset viewer](/assets/img/2025-07-17/dataset_viewer.png)
 
 <br>
 
