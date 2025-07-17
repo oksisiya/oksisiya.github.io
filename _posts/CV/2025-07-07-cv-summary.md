@@ -48,6 +48,9 @@ categories: CV
 ||BLIP-2|||
 ||Flamingo|||
 ||LLaVA|||
+||RT-1|||
+||RT-2|||
+|5 Sep 2024|OpenVLA|||
 
 <br>
 
@@ -133,6 +136,21 @@ categories: CV
 <br>
 
 ### Vision Language Action Model
+
+<br>
+
+* [ ] RT-1: Robotics Transformer for Real-World Control at Scale
+<br> (<https://arxiv.org/abs/2212.06817>)
+
+<br>
+
+* [ ] RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control
+<br> (<https://arxiv.org/abs/2307.15818>)
+
+<br>
+
+* [ ] OpenVLA: An Open-Source Vision-Language-Action Model
+<br> (<https://arxiv.org/abs/2406.09246>)
 
 <br>
 
