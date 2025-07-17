@@ -36,16 +36,17 @@ categories: CV
 
 <br>
 
-|Model|Modality||
-|---|---||
-|BERT|Text||
-|GPT|Text||
-|VIT|Image||
-|CLIP|Text, Image|Text Encoder: Tokenizer(GPT like), transformer <br> Image Encoder: ViT|
-|BLIP|||
-|BLIP-2|||
-|Flamingo|||
-|LLaVA|||
+|Year|Model|Modality|Structure|
+||---|---||
+||BERT|Text||
+||GPT|Text||
+||VIT|Image||
+|26 Feb 2021|**CLIP**|Text + Image|Text Encoder: Tokenizer(GPT like), transformer <br> Image Encoder: ViT|
+|19 Jul 2024|**Grounding DINO**|Text + Image|Text Encoder: BERT <br> Image Encoder: SwintT|
+||BLIP|||
+||BLIP-2|||
+||Flamingo|||
+||LLaVA|||
 
 <br>
 
