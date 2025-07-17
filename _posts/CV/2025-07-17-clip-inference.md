@@ -4,7 +4,7 @@ date: 2025-07-17 09:57:00 +0900
 categories: CV
 ---
 
-<!-- &nbsp;
+&nbsp;
 
 ![cosine similarity from paper](assets\img\2025-07-17\cosine_similarity_from_paper.png)
 
@@ -30,7 +30,7 @@ Hugging Face(🤗)에 있는 모델과 데이터셋을 사용한다.
 <br>
 
 모델과 데이터셋을 불러오기에 앞서 필요한 라이브러리를 import한다.
-
+<!-- 
 <br>
 
 ```python
