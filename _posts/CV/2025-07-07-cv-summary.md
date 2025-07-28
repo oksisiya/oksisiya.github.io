@@ -48,7 +48,9 @@ categories: CV
 ||BLIP-2|||
 ||Flamingo|||
 ||LLaVA|||
+|16 Aug 2022|SayCan|||
 ||RT-1|||
+|6 Mar 2023|PaLM-E|||
 ||RT-2|||
 |5 Sep 2024|OpenVLA|||
 
@@ -139,8 +141,18 @@ categories: CV
 
 <br>
 
+* [ ] Do As I Can, Not As I Say: Grounding Language in Robotic Affordances
+<br> (<https://arxiv.org/abs/2204.01691>)
+
+<br>
+
 * [ ] RT-1: Robotics Transformer for Real-World Control at Scale
 <br> (<https://arxiv.org/abs/2212.06817>)
+
+<br>
+
+* [ ] PaLM-E: An Embodied Multimodal Language Model
+<br> (<https://arxiv.org/abs/2303.03378>)
 
 <br>
 
