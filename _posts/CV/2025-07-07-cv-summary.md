@@ -49,9 +49,9 @@ categories: CV
 ||Flamingo|||
 ||LLaVA|||
 |16 Aug 2022|SayCan|||
-||RT-1|||
+|11 Aug 2023|RT-1|||
 |6 Mar 2023|PaLM-E|||
-||RT-2|||
+|28 Jul 2023|RT-2|||
 |5 Sep 2024|OpenVLA|||
 
 <br>
