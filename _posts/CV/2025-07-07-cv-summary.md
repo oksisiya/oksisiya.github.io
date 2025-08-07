@@ -1,47 +1,17 @@
 ---
-title: "Computer Vision Summary"
+title: "Summary"
 date: 2025-07-07 16:57:00 +0900
-categories: CV
+categories: [CV, Multi Modal]
 ---
 
 &nbsp;
 
-## 2D Computer Vision
-
-<br>
-
----
-
-<br>
-
-## 3D Computer Vision
-
-<br>
-
-* [ ] SuperPoint: Self-Supervised Interest Point Detection and Description
-<br> (<https://arxiv.org/abs/1712.07629>)
-
-<br>
-
-* [ ] DISK: Learning local features with policy gradient
-<br> (<https://arxiv.org/abs/2006.13566>)
-
-<br>
-
----
-
-<br>
-
-## Multi-Modal
-
-<br>
-
-|Year|Model|Modality|Structure|
+|Year|Model|Modality|Structure|Task
 ||---|---||
 ||BERT|Text||
 ||GPT|Text||
-||ViT|Image||
-|26 Feb 2021|**CLIP**|Text + Image|Text Encoder: Tokenizer(GPT like), transformer <br> Image Encoder: ViT|
+|3 Jun 2021|ViT|Image|
+|26 Feb 2021|**CLIP**|Text + Image|Text Encoder: GPT-like Transformer (Tokenizer) <br> Image Encoder: ViT|Zero-shot classification|
 |17 Aug 2021|SwinT|||
 |19 Jul 2024|**Grounding DINO**|Text + Image|Text Encoder: BERT <br> Image Encoder: SwinT|
 ||BLIP|||
