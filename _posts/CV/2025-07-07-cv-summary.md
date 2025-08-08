@@ -18,11 +18,11 @@ categories: [CV, Multi Modal]
 ||BLIP-2|||
 ||Flamingo|||
 ||LLaVA|||
-|16 Aug 2022|SayCan|||
-|11 Aug 2023|RT-1|||
-|6 Mar 2023|PaLM-E|||
+|04 Apr 2022|SayCan|||
+|13 Dec 2022|RT-1|||
+|06 Mar 2023|PaLM-E|||
 |28 Jul 2023|RT-2|||
-|5 Sep 2024|OpenVLA|||
+|13 Jun 2024|OpenVLA|||
 
 <br>
 
