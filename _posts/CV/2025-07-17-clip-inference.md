@@ -94,6 +94,8 @@ with torch.no_grad():
     text_embeddings = model.get_text_features(input_ids=inputs_text["input_ids"], attention_mask=inputs_text["attention_mask"])
 ```
 
+<br>
+
 ```
 # images
 [<PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=1344x894 at 0x33F20AD20>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=468x312 at 0x33F4B9D60>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x375 at 0x33F4BAB10>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x333 at 0x33F4BBBC0>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x333 at 0x33F4B8F50>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x333 at 0x33F20A8D0>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x375 at 0x33F4B91C0>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x333 at 0x33F20A7B0>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x333 at 0x33F20A6F0>, <PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x500 at 0x33F20A630>]
@@ -287,6 +289,9 @@ text_embeddings = text_embeddings / text_embeddings.norm(dim=-1, keepdim=True)
 
 similarity_matrix = cosine_similarity(image_embeddings.cpu().numpy(), text_embeddings.cpu().numpy())
 ```
+
+<br>
+
 ```
 # image_embeddings
 tensor([[ 0.0005, -0.0270,  0.0048,  ..., -0.0100,  0.0391, -0.0375],
