@@ -14,7 +14,7 @@ categories: [CV, Multi Modal]
 
 <br>
 
-Open X-Embodiment (OpenX) 데이터셋은 97만 개의 로봇 에피소드로 구성된 대규모 로봇 훈련 데이터셋[[1]](<https://arxiv.org/abs/2406.09246>)이다. 로봇의 동작은 순차적인(sequential) 특성을 갖는다. 상황(프레임)이 바뀔 때마다 로봇이 수행해야 하는 행동도 바뀌게 된다. 그렇기 때문에 로봇의 훈련 데이터셋은 지시문(instruction)과 사람이 수행한 영상을 프레임 단위로 나눈 이미지(image) 데이터로 구성된다.
+Open X-Embodiment (OpenX) 데이터셋은 97만 개의 로봇 에피소드로 구성된 대규모 로봇 훈련 데이터셋 [[1]](<https://arxiv.org/abs/2406.09246>)이다. 로봇의 동작은 순차적인(sequential) 특성을 갖는다. 상황(프레임)이 바뀔 때마다 로봇이 수행해야 하는 행동도 바뀌게 된다. 그렇기 때문에 로봇의 훈련 데이터셋은 지시문(instruction)과 사람이 수행한 영상을 프레임 단위로 나눈 이미지(image) 데이터로 구성된다.
 
 <br>
 
@@ -26,7 +26,7 @@ Open X-Embodiment (OpenX) 데이터셋은 97만 개의 로봇 에피소드로 �
 
 <br>
 
-데이터셋을 직접 로드해 어떤 식으로 구성되어 있는지 확인한다. OpenX 데이터셋은 공개 데이터셋으로, Colab 링크[[2]](<https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb>)를 통해 데이터셋을 다운로드해서 사용하거나 Hugging Face(🤗)로부터 데이터셋을 로드해서 사용할 수 있다. 다음 포스팅에서 OpenVLA 모델을 Huggle Face에서 불러올 것이기 때문에 구현하기 편하도록 후자의 방법을 택한다.
+데이터셋을 직접 로드해 어떤 식으로 구성되어 있는지 확인한다. OpenX 데이터셋은 공개 데이터셋으로, Colab 링크 [[2]](<https://colab.research.google.com/github/google-deepmind/open_x_embodiment/blob/main/colabs/Open_X_Embodiment_Datasets.ipynb>)를 통해 데이터셋을 다운로드해서 사용하거나 Hugging Face(🤗)로부터 데이터셋을 로드해서 사용할 수 있다. 다음 포스팅에서 OpenVLA 모델을 Huggle Face에서 불러올 것이기 때문에 구현하기 편하도록 후자의 방법을 택한다.
 
 <br>
 
@@ -160,7 +160,7 @@ dict_keys(['image', 'natural_language_embedding', 'natural_language_instruction'
 
 <br>
 
-이러한 이미지 프레임과 지시문을 VLA 모델의 입력으로 주면 로봇의 행동을 모델의 출력으로 얻을 수 있다. 다음 포스팅에서는 OpenVLA 모델을 로봇 태스크에 직접 적용해 보도록 한다.
+이러한 이미지와 지시문을 VLA 모델의 입력으로 주면 로봇의 행동을 모델의 출력으로 얻을 수 있다. 다음 포스팅에서는 OpenVLA 모델을 로봇 태스크에 직접 적용해 보도록 한다.
 
 <br>
 
