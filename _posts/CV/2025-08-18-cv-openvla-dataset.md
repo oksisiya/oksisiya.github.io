@@ -1,5 +1,5 @@
 ---
-title: "[VLA] OpenVLA 모델 학습 1) Open X-Embodiment Dataset"
+title: "[VLA] OpenVLA 모델 추론 1) Open X-Embodiment Dataset"
 date: 2025-08-18 10:50:00 +0900
 categories: [CV, Multi Modal]
 ---
