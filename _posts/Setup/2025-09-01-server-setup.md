@@ -6,7 +6,7 @@ categories: [Setup]
 
 &nbsp;
 
-이번 포스팅에서는 로컬에서 GPU 서버에 접속하는 방법을 다룬다. 포스팅을 위해 두 개의 블로그 [[1]](<http://youngseokim.tistory.com/147>), [[2]](<https://jstar0525.tistory.com/14>)를 참고했다.
+이번 포스팅에서는 로컬에서 GPU 서버에 접속하는 방법을 다룬다. 포스팅을 위해 두 개의 블로그 [[1]](<https://youngseokim.tistory.com/147>), [[2]](<https://jstar0525.tistory.com/14>)를 참고했다.
 
 <br>
 
@@ -92,7 +92,7 @@ source ~/.bashrc
 ---
 
 ## References
-[1] <http://youngseokim.tistory.com/147>  
+[1] <https://youngseokim.tistory.com/147>  
 [2] <https://jstar0525.tistory.com/14>  
 [3] <https://www.anaconda.com/docs/getting-started/anaconda/install#macos-linux-installation>  
 [4] <https://kagus2.tistory.com/63>
