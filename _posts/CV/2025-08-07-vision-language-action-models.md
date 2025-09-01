@@ -96,6 +96,15 @@ categories: [CV, Multi Modal]
 
 <br>
 
+* **End-to-end model**
+
+* **Vision language action model**
+
+* **Training**
+
+
+<br>
+
 ![RT-2 Figure 1](/assets/img/2025-08-07/rt2-1.png)
 
 <br>
