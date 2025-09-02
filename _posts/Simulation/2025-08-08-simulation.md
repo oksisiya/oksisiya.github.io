@@ -6,7 +6,7 @@ categories: [Simulation]
 
 &nbsp;
 
-이번 포스팅에서는 여러 가지 로봇 시뮬레이터(Simulator)에 대해 소개한다.
+이번 포스팅에서는 여러 가지 로봇 시뮬레이터(simulator)에 대해 소개한다.
 
 <br>
 
