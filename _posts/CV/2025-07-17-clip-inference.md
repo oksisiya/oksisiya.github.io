@@ -1,5 +1,5 @@
 ---
-title: "[Inference] CLIP"
+title: "[CLIP] Zero-Shot Image Classification"
 date: 2025-07-17 09:57:00 +0900
 categories: [CV, Multi Modal]
 ---
