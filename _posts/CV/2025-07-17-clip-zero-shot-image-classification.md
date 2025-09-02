@@ -6,7 +6,7 @@ categories: [CV, Multi Modal]
 
 &nbsp;
 
-이번 포스팅에서는 CLIP 모델을 사용해 보고 그 결과를 시각화한다.
+이번 포스팅에서는 CLIP 모델을 사용해 Zero-Shot Classification을 수행하고 그 결과를 시각화한다.
 
 <br>
 
@@ -14,7 +14,7 @@ categories: [CV, Multi Modal]
 
 <br>
 
-모델과 데이터셋은 Hugging Face(🤗)의 `openai/clip-vit-base-patch32` 모델[[1]](https://huggingface.co/openai/clip-vit-base-patch32)과 `clip-benchmark/wds_imagenetv2` 데이터셋[[2]](https://huggingface.co/datasets/clip-benchmark/wds_imagenetv2)을 사용한다. 사용하는 방법은 Hugging Face의 해당 페이지에서 Use this model/dataset을 통해 확인할 수 있다.
+모델과 데이터셋은 Hugging Face(🤗)의 `openai/clip-vit-base-patch32` 모델 [[1]](https://huggingface.co/openai/clip-vit-base-patch32)과 `clip-benchmark/wds_imagenetv2` 데이터셋 [[2]](https://huggingface.co/datasets/clip-benchmark/wds_imagenetv2)을 사용한다. 각각을 사용하는 방법은 Hugging Face에서 Use this model(또는 dataset)을 참고한다.
 * `openai/clip-vit-base-patch32`: CLIP 논문이 처음 공개되었을 당시 OpenAI에서 제공한 모델이다.
 * `clip-benchmark/wds_imagenetv2`: 이미지(`webp`)와 클래스(`cls`)로 구성된 데이터 셋이다. 정수로 나타내어지는 클래스가 무엇을 의미하는지는 `classnames.txt` 파일을 통해 확인할 수 있다. 해당 데이터셋은 모델의 일반화(generalization) 성능을 확인하기 위한 것으로 `test` 데이터셋만 존재하며 기존의 ImageNet 데이터셋의 레이블과 일치하지만 새로운 이미지들로 구성되어 있다.
 
@@ -28,11 +28,11 @@ categories: [CV, Multi Modal]
 
 <br>
 
-## Zero-Shot Classification
+## Zero-Shot Image Classification
 
 <br>
 
-CLIP 논문[[3]](https://arxiv.org/abs/2103.00020)에서는 아래의 그림과 같이 이미지와 텍스트 사이의 연관성을 cosine similarity를 통해 나타낸다. 이미지 임베딩과 텍스트 임베딩을 동일한 임베딩 공간(embedding space)에 놓고 올바른 쌍의 cosine similarity는 최대화하고 잘못된 쌍의 cosine similarity는 최소화하는 식으로 이미지 인코더와 텍스트 인코더를 학습시킨다.
+CLIP 논문 [[3]](https://arxiv.org/abs/2103.00020)에서는 아래의 그림과 같이 이미지와 텍스트 사이의 연관성을 cosine similarity를 통해 나타낸다. 이미지 임베딩과 텍스트 임베딩을 동일한 임베딩 공간(embedding space)에 놓고 올바른 쌍의 cosine similarity는 최대화하고 잘못된 쌍의 cosine similarity는 최소화하는 식으로 이미지 인코더와 텍스트 인코더를 학습시킨다.
 
 <br>
 
@@ -268,14 +268,13 @@ torch.Size([10, 512])
 <br>
 
 * `inputs_image`: 10 장의 3 채널의 224×224 크기의 이미지
-* `inputs_text["input_ids"]`: [SOS] 토큰: 49406 / [EOS] 토큰(공백): 49407 
+* `inputs_text["input_ids"]`: [SOS] 토큰: 49406 / [EOS] 토큰 (또는 공백): 49407 
+* `inputs_text["attention_mask"]`: 0에 해당하는 토큰은 연산하지 않는다. 문장과 상관없는 토큰은 attention_mask를 꺼서 연산에 포함시키지 않는다.
+* `image_embeddings`과 `text_embeddings`: 동일한 크기의 벡터로 변환된 것을 확인할 수 있다. 임베딩 벡터의 크기는 사용하는 모델에 따라 다르다.
 
-예를 들어, 토큰화를 거친 "red panda"는 [[SOS], "red", "panda", [EOS], [EOS]] = [49406, 736, 12952, 49407, 49407]로 대응한다.
+<br>
 
-* `inputs_text["attention_mask"]`: 0에 위치한 해당 토큰은 보지 않겠다. 문장의 시작, 중간 끝까지만 서로 어텐션을 보고 연산을 해라. 문장과 상관없는 위치는 다 이제 attention_mask를 꺼서 해당 위치에 해당하는 토큰은 보지 마라.
-
-`image_embeddings`과 `text_embeddings`은 총 10개의 데이터가 있고 각각은 512 길이의 벡터로 변환. 동일한 크기의 벡터로 변환된 것을 확인할 수 있다. 임베딩 벡터의 크기는 사용하는 모델에 따라 다르다.
-
+예를 들어, 토큰화를 거친 "red panda"는 [[SOS], "red", "panda", [EOS], [EOS]] = [49406, 736, 12952, 49407, 49407]로 대응된다.
 
 <br>
 
@@ -349,14 +348,6 @@ Cosine similarity가 클수록 두 벡터는 유사하며 히트맵 상에서 �
 
 <br>
 
-## Embedding Space Visualization
-
-<br>
-
-To be continued...
-
-<br>
-
 ---
 
 ## References
@@ -364,5 +355,3 @@ To be continued...
 [1] <https://huggingface.co/openai/clip-vit-base-patch32>  
 [2] <https://huggingface.co/datasets/clip-benchmark/wds_imagenetv2>  
 [3] <https://arxiv.org/abs/2103.00020>
-
-&nbsp;
