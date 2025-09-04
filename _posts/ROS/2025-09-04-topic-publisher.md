@@ -1,5 +1,5 @@
 ---
-title: "[ROS 2] ROS 2의 통신 방식 1) Topic - 개념과 명령어"
+title: "[ROS 2] ROS 2 통신 방식 1) Topic - 개념과 명령어"
 date: 2025-09-04 13:15:00 +0900
 categories: [ROS, Basic]
 ---
@@ -10,15 +10,15 @@ categories: [ROS, Basic]
 
 <br>
 
-Topic은 **Publisher-Subscriber** 모델을 기반으로 하는 ROS의 통신 방식이다.
+Topic은 **Publisher-Subscriber** 모델을 기반으로 하는 ROS 통신 방식이다.
 
 <br>
 
-Topic의 특징은 다음과 같다 [[2]](<https://hyundoil.tistory.com/430>).
+Topic의 특징은 다음과 같다 [[1]](<https://hyundoil.tistory.com/430>).
 
 * **고유한 메시지 타입**: Publihser가 발행하고 Subscriber가 구독하는 Message의 구조는 동일하게 정의되어야 한다.
 * **비동기 통신**: Publisher와 Subscriber는 발행하고 구독하는 Topic의 이름만 맞춘다면 Message를 주고받을 수 있다.
-* **다대다 통신**: 하나의 Publihser가 Topic을 통해 여러 Subscriber에 Message를 보낼 수 있고 하나의 Topic에 여러 Publisher가 Message를 발행할 수 있다. (아래의 그림 [[1]](<https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html>) 참고)
+* **다대다 통신**: 하나의 Publihser가 Topic을 통해 여러 Subscriber에 Message를 보낼 수 있고 하나의 Topic에 여러 Publisher가 Message를 발행할 수 있다. (아래의 그림 [[2]](<https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html>) 참고)
 
 <br>
 
@@ -38,7 +38,7 @@ Topic은 주로 센서 데이터나 상태 정보 등을 전달할 때 사용한
 
 <br>
 
-ROS 2 Topic과 관련된 명령어의 목록을 확인할 수 있다.
+ROS 2의 Topic과 관련된 명령어의 목록을 확인할 수 있다.
 
 <br>
 
@@ -88,7 +88,7 @@ ros2 topic list | grep <topic_name>
 
 <br>
 
-특정 Topic에 대한 세부 정보를 확인할 수 있다. 아래의 예시에서 `/cmd_vel`이라는 Topic의 Interface 타입, Publisher의 수, Subscriber의 수를 알 수 있다. Topic의 특징 중 다대다 통신을 다시 한번 상기할 수 있다 [[3]](<https://velog.io/@i_robo_u/개발자와-함께하는-ROS2-Humble-Topic-이해하기-ROS2-명령어-3>).
+특정 Topic에 대한 세부 정보를 확인할 수 있다. 아래의 예시에서는 `/cmd_vel`이라는 Topic의 Interface 타입, Publisher의 수, Subscriber의 수를 알 수 있다. Topic의 특징 중 다대다 통신을 다시 한번 상기할 수 있는 명령어이다 [[3]](<https://velog.io/@i_robo_u/개발자와-함께하는-ROS2-Humble-Topic-이해하기-ROS2-명령어-3>).
 
 <br>
 
@@ -134,7 +134,7 @@ ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.1, y: 0.0, z: 0.
 
 <br>
 
-특정 Topic에 대한 Message를 수신할 수 있다.
+특정 Topic에 대한 Message가 발행되면 Message의 내용을 확인할 수 있다.
 
 <br>
 
@@ -144,7 +144,43 @@ ros2 topic echo <topic_name>
 
 <br>
 
-![Topic command 6](/assets/img/2025-09-04/topic-command-6.png)
+![Topic command 6](/assets/img/2025-09-04/topic-command-6.png)|![Topic command 7](/assets/img/2025-09-04/topic-command-7.png)
+
+<br>
+
+### ros2 topic hz
+
+<br>
+
+특정 Topic의 전송 주기를 확인할 수 있다.
+
+<br>
+
+```bash
+ros2 topic echo hz <topic_name>
+```
+
+<br>
+
+![Topic command 8](/assets/img/2025-09-04/topic-command-8.png)
+
+<br>
+
+### ros2 topic bw
+
+<br>
+
+특정 Topic의 초당 대역폭을 확인할 수 있다.
+
+<br>
+
+```bash
+ros2 topic echo bw <topic_name>
+```
+
+<br>
+
+![Topic command 9](/assets/img/2025-09-04/topic-command-9.png)
 
 <br>
 
@@ -152,6 +188,6 @@ ros2 topic echo <topic_name>
 
 ## References
 
-[1] <https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html>  
-[2] <https://hyundoil.tistory.com/430>  
+[1] <https://hyundoil.tistory.com/430>  
+[2] <https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html>  
 [3] <https://velog.io/@i_robo_u/개발자와-함께하는-ROS2-Humble-Topic-이해하기-ROS2-명령어-3>
