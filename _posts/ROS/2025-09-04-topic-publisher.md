@@ -1,20 +1,157 @@
 ---
-title: "ROS 2 Summary"
+title: "[ROS 2] ROS 2의 통신 방식 1) Topic - 개념과 명령어"
 date: 2025-09-04 13:15:00 +0900
 categories: [ROS, Basic]
 ---
 
 &nbsp;
 
-## 개발 환경
+## Topic이란?
 
 <br>
 
-* Ubuntu 22.04
-* ROS 2 Humble
-* Gazebo Classic (11.0.0)
-* Visual Studio Code
+Topic은 **Publisher-Subscriber** 모델을 기반으로 하는 ROS의 통신 방식이다.
+
+<br>
+
+Topic의 특징은 다음과 같다 [[2]](<https://hyundoil.tistory.com/430>).
+
+* **고유한 메시지 타입**: Publihser가 발행하고 Subscriber가 구독하는 Message의 구조는 동일하게 정의되어야 한다.
+* **비동기 통신**: Publisher와 Subscriber는 발행하고 구독하는 Topic의 이름만 맞춘다면 Message를 주고받을 수 있다.
+* **다대다 통신**: 하나의 Publihser가 Topic을 통해 여러 Subscriber에 Message를 보낼 수 있고 하나의 Topic에 여러 Publisher가 Message를 발행할 수 있다. (아래의 그림 [[1]](<https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html>) 참고)
+
+<br>
+
+Topic은 주로 센서 데이터나 상태 정보 등을 전달할 때 사용한다.
+
+<br>
+
+![Topic background](/assets/img/2025-09-04/topic-background.gif)
+
+<br>
+
+## Topic 명령어
+
+<br>
+
+### ros2 topic -h
+
+<br>
+
+ROS 2 Topic과 관련된 명령어의 목록을 확인할 수 있다.
+
+<br>
+
+```bash
+ros2 topic -h   # h는 help
+```
+
+<br>
+
+![Topic command 1](/assets/img/2025-09-04/topic-command-1.png)
+
+<br>
+
+### ros2 topic list
+
+<br>
+
+현재 시스템에서 활성화되어 있는 모든 Topic의 목록을 확인할 수 있다.
+
+<br>
+
+```bash
+ros2 topic list
+```
+
+<br>
+
+![Topic command 2](/assets/img/2025-09-04/topic-command-2.png)|![Topic command 3](/assets/img/2025-09-04/topic-command-3.png)
+
+<br>
+
+`grep` 명령어를 붙이면 특정 Topic의 목록을 확인할 수 있다.
+
+<Br>
+
+```bash
+ros2 topic list | grep <topic_name>
+```
+
+<br>
+
+![Topic command 4](/assets/img/2025-09-04/topic-command-4.png)
+
+<br>
+
+### ros2 topic info
+
+<br>
+
+특정 Topic에 대한 세부 정보를 확인할 수 있다. 아래의 예시에서 `/cmd_vel`이라는 Topic의 Interface 타입, Publisher의 수, Subscriber의 수를 알 수 있다. Topic의 특징 중 다대다 통신을 다시 한번 상기할 수 있다 [[3]](<https://velog.io/@i_robo_u/개발자와-함께하는-ROS2-Humble-Topic-이해하기-ROS2-명령어-3>).
+
+<br>
+
+```bash
+ros2 topic info <topic_name>
+```
+
+<br>
+
+![Topic command 5](/assets/img/2025-09-04/topic-command-5.png)
+
+<br>
+
+### ros2 topic pub
+
+<br>
+
+특정 Topic에 대한 Message를 발행할 수 있다.
+
+<br>
+
+```bash
+ros2 topic pub <topic_name> <interface_name> <message>
+```
+
+<br>
+
+아래의 예시는 `/cmd_vel`이라는 Topic에 Message를 발행함으로써 로봇에게 속도 명령을 주는 명령어이다. 해당 명령어를 실행하면 로봇은 천천히(0.1m/s) 앞으로 이동하며 왼쪽 방향으로 회전한다.
+
+<br>
+
+```bash
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.1, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.0}}"
+```
+
+<br>
+
+![TIAGo simulation](/assets/img/2025-09-04/tiago-simulation.gif)
+
+<br>
+
+### ros2 topic echo
+
+<br>
+
+특정 Topic에 대한 Message를 수신할 수 있다.
+
+<br>
+
+```bash
+ros2 topic echo <topic_name>
+```
+
+<br>
+
+![Topic command 6](/assets/img/2025-09-04/topic-command-6.png)
 
 <br>
 
 ---
+
+## References
+
+[1] <https://docs.ros.org/en/foxy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Topics/Understanding-ROS2-Topics.html>  
+[2] <https://hyundoil.tistory.com/430>  
+[3] <https://velog.io/@i_robo_u/개발자와-함께하는-ROS2-Humble-Topic-이해하기-ROS2-명령어-3>
