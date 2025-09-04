@@ -88,7 +88,7 @@ ros2 topic list | grep <topic_name>
 
 <br>
 
-특정 Topic에 대한 세부 정보를 확인할 수 있다. 아래의 예시에서는 `/cmd_vel`이라는 Topic의 Interface 타입, Publisher의 수, Subscriber의 수를 알 수 있다. Topic의 특징 중 다대다 통신을 다시 한번 상기할 수 있는 명령어이다 [[3]](<https://velog.io/@i_robo_u/개발자와-함께하는-ROS2-Humble-Topic-이해하기-ROS2-명령어-3>).
+특정 Topic에 대한 세부 정보를 확인할 수 있다. 아래의 예시에서는 `/cmd_vel`이라는 Topic의 Interface 타입, Publisher의 수, Subscriber의 수를 알 수 있다. Topic의 특징 중 다대다 통신을 다시 한번 상기한다 [[3]](<https://velog.io/@i_robo_u/개발자와-함께하는-ROS2-Humble-Topic-이해하기-ROS2-명령어-3>).
 
 <br>
 
