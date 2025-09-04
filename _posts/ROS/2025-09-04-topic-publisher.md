@@ -116,7 +116,7 @@ ros2 topic pub <topic_name> <interface_name> <message>
 
 <br>
 
-아래의 예시는 `/cmd_vel`이라는 Topic에 Message를 발행함으로써 로봇에게 속도 명령을 주는 명령어이다. 해당 명령어를 실행하면 로봇은 천천히(0.1m/s) 앞으로 이동하며 왼쪽 방향으로 회전한다.
+아래의 예시는 `/cmd_vel`이라는 Topic에 Message를 발행함으로써 로봇에게 속도 명령을 주는 명령어이다. 해당 명령어를 실행하면 로봇은 천천히(0.1m/s 속력으로) 앞으로 이동하며 왼쪽 방향으로 회전한다.
 
 <br>
 
