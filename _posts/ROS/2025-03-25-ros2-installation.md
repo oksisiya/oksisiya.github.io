@@ -1,17 +1,16 @@
 ---
 title: "[ROS 2] ROS 2 Humble 설치"
-date: 2025-03-25
+date: 2025-03-25 09:00:00 +0900
 categories: ROS
 ---
 
 &nbsp;
 
-Ubuntu 20.04를 사용하는 경우 Humble 버전이 아닌 Foxy 버전을 선호할 수 있다. 하지만 Foxy 버전의 경우 배포판 유지 관리가 중단된 지 오래이므로 최신 기능(Nav2 등)을 사용하고자 한다면 Humble 버전을 추천한다.
+Ubuntu 20.04를 사용하는 경우 Humble 버전이 아닌 Foxy 버전을 선호할 수 있다. 하지만 Foxy 버전의 경우 배포판 유지 관리가 중단된 지 오래이므로 최신 기능(Nav2 등)을 사용하고자 한다면 Humble 버전을 추천한다. (아래의 그림 참고 [[1]](<https://metrics.ros.org/rosdistro_rosdistro.html>)
 
 <br>
 
 ![Ros distro maintenance](/assets/img/2025-03-25/ros-distro-maintenance.png)
-(이미지 출처: https://metrics.ros.org/rosdistro_rosdistro.html)
 
 <br>
 
