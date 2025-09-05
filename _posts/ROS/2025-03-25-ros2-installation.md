@@ -1,7 +1,7 @@
 ---
 title: "[ROS 2] ROS 2 Humble 설치"
 date: 2025-03-25 09:00:00 +0900
-categories: ROS
+categories: ROS, Basic
 ---
 
 &nbsp;
@@ -169,7 +169,7 @@ ls
 
 ![Check installation](/assets/img/2025-03-25/check-installation.png)
 
-&nbsp;
+<br>
 
 ---
 

@@ -6,7 +6,7 @@ categories: ROS
 
 &nbsp;  
 
-[ROS 2 Humble 설치](https://oksisiya.github.io/posts/ros-2-installation/)가 완료되었다면 터미널에서 ROS 2와 관련된 명령어를 사용할 수 있도록 설정하는 과정이 필요하다. 현재는 터미널에서 `ros2` 명령어를 실행하면 명령어를 찾을 수 없다는 에러 메시지가 표시된다.
+ROS 2 Humble 설치가 완료되었다면 터미널에서 ROS 2와 관련된 명령어를 사용할 수 있도록 설정하는 과정이 필요하다. 현재는 터미널에서 `ros2` 명령어를 실행하면 명령어를 찾을 수 없다는 에러 메시지가 표시된다.
 
 <br>
 
