@@ -1,5 +1,5 @@
 ---
-title: "[ROS 2] ROS 2 통신 2) Interface - 개념과 명령어"
+title: "[ROS 2] ROS 2 통신 2) Interface 개념과 명령어"
 date: 2025-09-05 10:05:00 +0900
 categories: [ROS, Basic]
 ---
