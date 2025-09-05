@@ -66,7 +66,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-a
 
 <br>
 
-명령어에서 [링크](<http://packages.ros.org/ros2/ubuntu>)만 긁어 접속해 보면 구체적으로 어떤 파일들을 설치하는 것인지 확인할 수 있다. 명령어 실행 후 아무것도 뜨지 않는다면 정상적으로 설치가 완료된 것이다.
+명령어에서 [링크](<https://packages.ros.org/ros2/ubuntu>)만 긁어 접속해 보면 구체적으로 어떤 파일들을 설치하는 것인지 확인할 수 있다. 명령어 실행 후 아무것도 뜨지 않는다면 정상적으로 설치가 완료된 것이다.
 
 <br>
 
