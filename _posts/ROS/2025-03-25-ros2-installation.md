@@ -22,7 +22,7 @@ Ubuntu 20.04를 사용하는 경우 Humble 버전이 아닌 Foxy 버전을 선�
 
 <br>
 
-아래의 명령어를 실행해 Ubuntu 시스템에서 Universe 리포지토리를 활성화한다.
+Ubuntu 시스템에서 Universe 리포지토리를 활성화한다.
 
 <br>
 
@@ -41,7 +41,7 @@ sudo add-apt-repository universe
 
 <br>
 
-curl 패키지를 설치하고 curl을 사용해 GPG 키를 등록한다.
+curl 패키지를 설치하고 `curl` 명령어를 사용해 GPG 키를 등록한다.
 
 <br>
 
@@ -156,7 +156,7 @@ sudo apt install --no-install-recommends -y libasio-dev libtinyxml2-dev libcunit
 
 <br>
 
-아래의 명령어를 실행해 ROS 2 Humble 버전이 정상적으로 설치되었는지 확인한다.
+ROS 2 Humble 버전이 정상적으로 설치되었는지 확인한다.
 
 <br>
 
