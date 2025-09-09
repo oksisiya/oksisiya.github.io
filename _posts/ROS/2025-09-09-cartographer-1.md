@@ -1,16 +1,32 @@
 ---
-title: "[ROS 2] Cartographer SLAM 1) 시뮬레이션 환경 구성"
+title: "[ROS 2] Cartographer SLAM 1) NeuronBot2 시뮬레이션 환경 구성"
 date: 2025-09-09 12:09:00 +0900
 categories: [ROS, SLAM]
 ---
 
 &nbsp;
 
-## NeuronBot2 Installation
+이번 포스팅에서는 지도를 작성하기에 앞서 시뮬레이션 환경을 구성한다.
 
 <br>
 
-시뮬레이션 환경을 구성하는 데 필요한 개발 도구들을 설치한다.
+## NeuronBot2
+
+<br>
+
+NeuronBot2 [[1]](<https://www.adlinktech.com/Products/ROS2_Solution/ROS_Opensource_Solution/NeuronBot?lang=ko>)는 ADLINK Technology에서 개발한 로봇이다. ROS/ROS 2 라이브러리 및 패키지를 지원한다.
+
+<br>
+
+![NeuronBot2](/assets/img/2025-09-09/neuronbot2.png)
+
+<br>
+
+## NeuronBot2 설치
+
+<br>
+
+시뮬레이션 환경을 구성하는 데 필요한 개발 도구들을 설치한다 [[2]](<https://github.com/Adlink-ROS/neuronbot2>).
 
 <br>
 
@@ -67,7 +83,7 @@ vcs import src < neuronbot2_ros2.repos
 
 <br>
 
-rosdep 데이터베이스를 업데이트한다.
+rosdep 데이터베이스를 업데이트한다. `sudo rosdep init` 명령어는 업데이트 전 최소 한 번은 실행되어야 한다 [[3]](<https://ropiens.tistory.com/222>).
 
 <br>
 
@@ -176,13 +192,10 @@ ros2 launch neuronbot2_gazebo neuronbot2_world.launch.py
 
 <br>
 
-## ??
-
-<br>
-
 ---
 
 ## References
 
-[1] <https://github.com/Adlink-ROS/neuronbot2>  
-[2] <https://ropiens.tistory.com/222>
+[1] <https://www.adlinktech.com/Products/ROS2_Solution/ROS_Opensource_Solution/NeuronBot?lang=ko>  
+[2] <https://github.com/Adlink-ROS/neuronbot2>  
+[3] <https://ropiens.tistory.com/222>
