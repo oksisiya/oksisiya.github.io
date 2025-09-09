@@ -1,5 +1,5 @@
 ---
-title: "[ROS 2] Cartographer SLAM"
+title: "[ROS 2] Cartographer SLAM 1) 시뮬레이션 환경 구성"
 date: 2025-09-09 12:09:00 +0900
 categories: [ROS, SLAM]
 ---
