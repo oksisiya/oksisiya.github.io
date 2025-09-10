@@ -112,7 +112,7 @@ rosdep install --from-paths src --ignore-src -r -y --rosdistro humble
 
 <br>
 
-워크스페이스의 루트 디렉토리에서 패키지를 빌드한다.
+워크스페이스의 루트 디렉토리(`nav2_ws`)에서 패키지를 빌드한다.
 
 <br>
 
