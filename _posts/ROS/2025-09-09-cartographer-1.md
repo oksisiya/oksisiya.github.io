@@ -6,7 +6,7 @@ categories: [ROS, SLAM]
 
 &nbsp;
 
-이번 포스팅에서는 지도를 작성하기에 앞서 시뮬레이션 환경을 구성한다.
+이번 포스팅에서는 지도를 작성을 수행하기에 앞서 시뮬레이션 환경을 구성한다.
 
 <br>
 
@@ -26,7 +26,7 @@ NeuronBot2 [[1]](<https://www.adlinktech.com/Products/ROS2_Solution/ROS_Opensour
 
 <br>
 
-시뮬레이션 환경을 구성하는 데 필요한 개발 도구들을 설치한다 [[2]](<https://github.com/Adlink-ROS/neuronbot2>).
+시뮬레이션 환경을 구성하는 데 필요한 개발 도구들을 설치한다 [[2]](<https://github.com/Adlink-ROS/neuronbot2>). (`-y` 옵션: "yes"를 자동으로 선택)
 
 <br>
 
@@ -53,7 +53,7 @@ sudo apt update && sudo apt install -y \
 
 <br>
 
-`nav2_ws`라는 이름의 워크스페이스를 생성한다.
+`nav2_ws`라는 이름의 워크스페이스를 생성한다. (`-p` 옵션: 부모 디렉토리까지 함께 생성)
 
 <br>
 
@@ -67,7 +67,7 @@ mkdir -p ~/nav2_ws/src
 
 <br>
 
-생성한 워크스페이스로 이동한 뒤 깃 리포지토리로부터 필요한 파일을 다운로드한다.
+생성한 워크스페이스로 이동한 뒤 깃 리포지토리로부터 필요한 파일을 다운로드한다. (`vcs`: version control system)
 
 <br>
 
@@ -98,7 +98,7 @@ rosdep update
 
 <br>
 
-다른 의존성 패키지들도 설치한다.
+패키지를 빌드(build)하기 전에 패키지를 사용하는 데 필요한 의존성 패키지를 설치한다.
 
 <br>
 
@@ -112,7 +112,7 @@ rosdep install --from-paths src --ignore-src -r -y --rosdistro humble
 
 <br>
 
-패키지를 빌드한다.
+워크스페이스의 루트 디렉토리에서 패키지를 빌드한다.
 
 <br>
 
@@ -126,7 +126,7 @@ colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
 
 <br>
 
-`.zshrc` 파일에 아래의 명령어를 추가한다.
+터미널을 열 때마다 생성한 워크스페이스를 자동으로 활성화하기 위해 `.zshrc` 파일에 환경 변수 설정 파일을 등록한다.
 
 <br>
 
@@ -140,7 +140,7 @@ source ~/nav2_ws/install/local_setup.zsh
 
 <br>
 
-터미널에 아래의 명령어를 입력하거나 새로운 터미널 창을 연다.
+새 터미널을 열거나 아래의 명령어를 실행한다.
 
 <br>
 
@@ -154,7 +154,7 @@ source ~/nav2_ws/install/local_setup.zsh
 
 <br>
 
-NeuronBot2 시뮬레이션을 실행시키려고 하면 에러가 나고 열리지 않는다.
+`neuronbot2_gazebo` 패키지 안에 있는 `neuronbot2_world.launch.py`라는 런치(launch) 파일을 실행시킨다. 하지만 가제보 클라이언트(gzclient) 쪽에서 에러가 발생해 프로세스가 중단된 것을 확인할 수 있다.
 
 <br>
 
@@ -168,7 +168,13 @@ ros2 launch neuronbot2_gazebo neuronbot2_world.launch.py
 
 <br>
 
-그럴 땐 ~...
+`.zshrc` 파일에 가제보가 설치된 실제 경로를 환경 변수로 등록한다. (`gazebo`와 `gazebo-11` 중 어떤 것을 선택해도 상관없다.)
+
+<br>
+
+```
+export GAZEBO_RESOURCE_PATH=/usr/share/gazebo-11
+```
 
 <br>
 
@@ -176,7 +182,7 @@ ros2 launch neuronbot2_gazebo neuronbot2_world.launch.py
 
 <br>
 
-마침내 시뮬레이션이 정상적으로 실행된 것을 확인할 수 있다.
+새 터미널을 열어 런치 파일을 다시 한번 실행시키면 사람 얼굴 형태의 환경에 NeuronBot2 로봇이 정상적으로 스폰(spawn)된 것을 확인할 수 있다.
 
 <br>
 
@@ -184,11 +190,21 @@ ros2 launch neuronbot2_gazebo neuronbot2_world.launch.py
 
 <br>
 
-라이다~... 뉴런봇2를 확인할 수 있다.
+로봇이 2D LiDAR로 주변 환경을 감지하는 것을 확인할 수 있다.
 
 <br>
 
 ![Screenshot 24](/assets/img/2025-09-09/cartographer-24.png)|![Screenshot 25](/assets/img/2025-09-09/cartographer-25.png)|![Screenshot 26](/assets/img/2025-09-09/cartographer-26.png)
+
+<br>
+
+시뮬레이션 환경 구성이 끝났다면 아래의 명령어를 실행해 시뮬레이션을 깔끔하게 종료한다.
+
+<br>
+
+```bash
+killgazebo
+```
 
 <br>
 
