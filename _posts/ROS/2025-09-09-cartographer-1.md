@@ -83,7 +83,7 @@ vcs import src < neuronbot2_ros2.repos
 
 <br>
 
-rosdep 데이터베이스를 업데이트한다. `sudo rosdep init` 명령어는 업데이트 전 최소 한 번은 실행되어야 한다 [[3]](<https://ropiens.tistory.com/222>).
+rosdep 데이터베이스를 업데이트한다. `sudo rosdep init` 명령어는 업데이트 전 최소 한 번은 실행해야 한다 [[3]](<https://ropiens.tistory.com/222>).
 
 <br>
 
@@ -154,7 +154,7 @@ source ~/nav2_ws/install/local_setup.zsh
 
 <br>
 
-`neuronbot2_gazebo` 패키지 안에 있는 `neuronbot2_world.launch.py`라는 런치(launch) 파일을 실행시킨다. 하지만 가제보 클라이언트(gzclient) 쪽에서 에러가 발생해 프로세스가 중단된 것을 확인할 수 있다.
+`neuronbot2_gazebo` 패키지 안에 있는 `neuronbot2_world.launch.py`라는 런치(launch) 파일을 실행한다. 하지만 가제보 클라이언트(gzclient) 쪽에서 에러가 발생해 프로세스가 중단된 것을 확인할 수 있다.
 
 <br>
 
@@ -182,7 +182,7 @@ export GAZEBO_RESOURCE_PATH=/usr/share/gazebo-11
 
 <br>
 
-새 터미널을 열어 런치 파일을 다시 한번 실행시키면 사람 얼굴 형태의 환경에 NeuronBot2 로봇이 정상적으로 스폰(spawn)된 것을 확인할 수 있다.
+새 터미널을 열어 런치 파일을 다시 한번 실행하면 사람 얼굴 형태의 환경(Mememan world)에 NeuronBot2 로봇이 정상적으로 스폰(spawn)된 것을 확인할 수 있다.
 
 <br>
 
@@ -205,6 +205,32 @@ export GAZEBO_RESOURCE_PATH=/usr/share/gazebo-11
 ```bash
 killgazebo
 ```
+
+<br>
+
+## 시뮬레이션 환경 변경
+
+<br>
+
+런치 파일을 실행했을 때 Mememan 환경이 아닌 다른 환경을 띄울 수 있다.
+
+<br>
+
+런치 파일에서 `mememan_world.model`을 `phenix_world.model`로 수정한다.
+
+(런치 파일 경로:`nav2_ws/src/neuronbot2/neuronbot2_gazebo/launch/neuronbot2_world.launch.py`)
+
+<br>
+
+![Screenshot 2](/assets/img/2025-09-10/screenshot-2.png)|![Screenshot 3](/assets/img/2025-09-10/screenshot-3.png)
+
+<br>
+
+다시 런치 파일을 실행해 보면 Phenix 환경이 열리는 것을 확인할 수 있다.
+
+<br>
+
+![Screenshot 4](/assets/img/2025-09-10/screenshot-4.png)
 
 <br>
 
