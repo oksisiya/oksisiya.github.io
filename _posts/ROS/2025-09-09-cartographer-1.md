@@ -6,10 +6,6 @@ categories: [ROS, SLAM]
 
 &nbsp;
 
-이번 포스팅에서는 지도 작성을 수행하기에 앞서 시뮬레이션 환경을 구성한다.
-
-<br>
-
 ## NeuronBot2
 
 <br>
