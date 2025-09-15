@@ -31,15 +31,13 @@ Cartographer로 SLAM을 수행하기 위해 필요한 세 가지 파일이 있�
 
 <br>
 
-런치 파일은 수정이 필요하다. 런치 파일에서 실행하고자 하는 노드의 이름이 잘못지정되어 있다. 실제 실행 가능한 파일이 있는 디렉토리에서 확인해 보면 실제 실행 가능한 파일 이름과 다르게 지정된 걸 확인할 수 있다.
+Cartographer SLAM을 수행하려면 런치 파일을 수정해야 한다. 런치 파일을 통해 실행하고자 하는 파일 이름이 잘못 지정되어 있기 때문이다. 실행 파일이 존재하는 디렉토리✳︎를 직접 확인해 보면 실행 파일 이름(`cartographer_occupancy_grid_node`)과 런치 파일에 지정된 파일 이름(`occupancy_grid_node`)이 다른 것을 확인할 수 있다.
+
+✳︎ 파일 경로: `Computer/opt/ros/humble/lib/cartographer_ros/cartographer_occupancy_grid_node`
 
 <br>
 
-* 파일 경로: `Computer/opt/ros/humble/lib/cartographer_ros/cartographer_occupancy_grid_node`
-
-<br>
-
-Neuronbot2에서 업데이트를 해주지 않아서 수동으로 수정해야 한다.
+다음과 같이 실행 파일 이름과 노드 이름을 변경한다.
 
 * `executable='occupancy_grid_node'` => `'cartographer_occupancy_grid_node'`
 * `name='occupancy_grid_node'` => `'cartographer_occupancy_grid_node'`
@@ -50,7 +48,7 @@ Neuronbot2에서 업데이트를 해주지 않아서 수동으로 수정해야 �
 
 <br>
 
-#### Lua 파일
+### Lua 파일
 
 <br>
 
@@ -59,18 +57,18 @@ Neuronbot2에서 업데이트를 해주지 않아서 수동으로 수정해야 �
 
 <br>
 
-런치 파일에서 cartographer_node를 실행할 때 필수로 포함해야 하는 인자(arguments)로 configuration_directory와 configuration_basename이 있다. 런치 파일에서 다음과 같이 사전 정의된 것을 확인할 수 있다.
+런치 파일에는 Cartographer 노드를 실행하기 위해 필수로 포함해야 하는 인자(arguments)로 `cartographer_config_dir`와 `configuration_basename`이 있다.
 
 <br>
 
 ```python
 cartographer_config_dir = LaunchConfiguration('cartographer_config_dir', default=os.path.join(get_package_share_directory('neuronbot2_slam'), 'config'))
-configuration_basename = LaunchConfiguration('configuration_basename', default='catographer.lua')
+configuration_basename = LaunchConfiguration('configuration_basename', default='cartographer.lua')
 ```
 
 <br>
 
-ROS 2에서 config 파일은 대부분 yml 포맷을 많이 사용하지만 cartographer의 경우에는 .lua 확장자로 config 파일을 기술한다.
+그중 `configuration_basename`의 기본값이 Lua 포맷으로 기술된 설정(config) 파일(`cartographer.lua`)임을 확인할 수 있다. ROS 2에서 config 파일은 대부분 YAML 포맷으로 기술하지만 Cartographer의 경우 Lua 포맷으로 config 파일을 기술한다.
 
 <br>
 
@@ -78,7 +76,7 @@ ROS 2에서 config 파일은 대부분 yml 포맷을 많이 사용하지만 cart
 
 <br>
 
-#### Rviz 파일
+### Rviz 파일
 
 <br>
 
@@ -87,7 +85,7 @@ ROS 2에서 config 파일은 대부분 yml 포맷을 많이 사용하지만 cart
 
 <br>
 
-통합 터미널을 열어(Open in integrated Terminal) 직접 파일을 확인해 보면 Rviz Displays에 시각화와 관련된 것들이 설정되어 있는 것을 확인할 수 있다. 사전 정의된 이 파일을 그대로 사용한다.
+통합 터미널을 열고 아래의 명령어를 실행해 Rivz 파일을 확인해 보면 Displays에서 시각화와 관련된 설정들을 확인할 수 있다.
 
 <br>
 
@@ -113,6 +111,10 @@ rviz2 -d slam.rviz
 
 <br>
 
+첫 번째 터미널을 열어 런치 파일을 실행한다.
+
+<br>
+
 ```bash
 ros2 launch neuronbot2_gazebo neuronbot2_world.launch.py
 ```
@@ -124,6 +126,10 @@ ros2 launch neuronbot2_gazebo neuronbot2_world.launch.py
 <br>
 
 ### Cartographer SLAM 수행
+
+<br>
+
+두 번째 터미널을 열어 Cartographer SLAM을 수행한다.
 
 <br>
 
@@ -141,7 +147,7 @@ ros2 launch neuronbot2_slam cartographer_launch.py open_rviz:=true use_sim_time:
 
 <br>
 
-로봇을 지도 상에서 움직인다. 실제 환경에서 맵핑할 때의 팁은 천천히 움직인다. 히팅된 영역은 빨갛게. lasersacn. pointcloud
+세 번째 터미널을 열어 로봇을 지도 상에서 움직인다. (실제 환경에서 맵핑할 때의 팁은 로봇을 천천히 움직이는 것이다.)
 
 <br>
 
@@ -155,8 +161,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 <br>
 
-지도는 점유 격자 지도(occupancy grid map) 형태로 그려진다. occupancy grid map 기반의 지도 파일이다.
-
+지도는 점유 격자 지도(occupancy grid map) 형태로 작성된다.
 
 <br>
 
@@ -172,7 +177,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 <br>
 
-지도를 저장할 디렉토리에는 사전에 정의된 지도들이 있다. 패키지 상에서 완성된 지도가 있고. 이미 만들어진 지도가 있다.
+지도를 저장할 디렉토리를 확인해 보면 패키지 내에서 사전 정의된 지도들이 있다.
 
 <br>
 
@@ -180,7 +185,7 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 
 <br>
 
-2D LiDAR 기반의 SLAM 알고리즘을 통해서 작성된 지도를 저장하려면 `nav2_map_server` 패키지의 `map_saver` 노드를 실행해야 한다. 아래의 명령어를 실행한다.
+2D LiDAR 기반의 SLAM 알고리즘을 통해 작성한 지도를 저장하려면 `nav2_map_server` 패키지의 `map_saver` 노드를 실행한다.
 
 <br>
 
@@ -202,27 +207,14 @@ ros2 run nav2_map_server map_saver_cli -f phenix_my.pgm
 
 <br>
 
+두 파일에 대한 설명은 다음과 같다.
+
 * `<file_name>.pgm`
     - 회색 음영과 픽셀 단위로 2D 환경의 지도를 표현하는 이미지 파일 
-    - 영상 파일 확장자 중 하나 (portable gray map)
+    - 영상 파일 확장자 중 하나 (`.pgm`: portable gray map)
 * `<file_name>.yml`
     - 지도 설정과 관련된 파일
     - 네비게이션 패키지(`nav2` 등)에 필요한 메타데이터를 포함
-
-<br>
-
-|파라미터|설명|phenix_my.yml 해석|
-|image|설정 파일과 연결된 이미지(지도) 파일|
-|mode|지도 해석 방식|- 지도를 세 가지 영역으로 구분<br>-점유 영역, 자유 영역, 미지의 영역|
-|resolution|지도의 해상도 ([m])|한 픽셀 당 5cm|
-|origin|map 좌표계의 기준점 (x, y, θ)|- 원점은 map frame을 기준으로 (-3.82, -15.2)에 위치|
-|negate|색 반전 여부 (default: 0)|점유 영역: 검정색 / 자유 영역: 흰색 / 미지의 영역: 회색<br>(1로 설정할 경우 점유와 자유가 반대)|
-|occupied_thresh|점유 공간 판정 기준|픽셀 값이 0.65보다 크다면 점유 영역|
-|free_thresh|자유 공간 판정 기준|픽셀 값이 0.25보다 작다면 자유 영역|
-
-<br>
-
-지도(.pgm) 상에서 원점은 왼쪽 하단에 위치한다.
 
 <br>
 
@@ -230,7 +222,23 @@ ros2 run nav2_map_server map_saver_cli -f phenix_my.pgm
 
 <br>
 
-생성된 지도에 대해 워크스페이스의 루트 디렉토리에서 패키지를 빌드한다.
+`<file_name>.yml`의 파라미터에 대한 설명은 다음과 같다. (지도 상에서 원점은 왼쪽 하단에 위치한다.)
+
+<br>
+
+|파라미터|설명|`phenix_my.yml`의 해석|
+|-|-|-|
+|image|설정 파일과 연결된 지도 파일||
+|mode|지도 해석 방식|지도를 세 가지 영역으로 구분<br>(점유 영역, 자유 영역, 미지의 영역)|
+|resolution|지도 해상도 ([m])|한 픽셀 당 5cm|
+|origin|map 좌표계 기준점 (x, y, θ)|원점은 map frame을 기준으로 (-3.82, -15.2)에 위치|
+|negate|색 반전 여부 (default: 0)|점유 영역: 검정색 / 자유 영역: 흰색 / 미지의 영역: 회색<br>(1로 설정할 경우 점유와 자유가 반대)|
+|occupied_thresh|점유 공간 판정 기준|픽셀 값이 0.65보다 크다면 점유 영역|
+|free_thresh|자유 공간 판정 기준|픽셀 값이 0.25보다 작다면 자유 영역|
+
+<br>
+
+생성된 지도에 대해 워크스페이스의 루트 디렉토리(`nav2_ws`)에서 패키지를 빌드한다.
 
 <br>
 
