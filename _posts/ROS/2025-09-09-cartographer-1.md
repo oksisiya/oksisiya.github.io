@@ -94,7 +94,7 @@ rosdep update
 
 <br>
 
-패키지를 빌드(build)하기 전에 패키지를 사용하는 데 필요한 의존성 패키지를 설치한다.
+패키지를 빌드하기 전에 패키지를 사용하는 데 필요한 의존성 패키지를 설치한다.
 
 <br>
 
@@ -150,7 +150,7 @@ source ~/nav2_ws/install/local_setup.zsh
 
 <br>
 
-`neuronbot2_gazebo` 패키지 안에 있는 `neuronbot2_world.launch.py`라는 런치(launch) 파일을 실행한다. 하지만 가제보 클라이언트(gzclient) 쪽에서 에러가 발생해 프로세스가 중단된 것을 확인할 수 있다.
+`neuronbot2_gazebo` 패키지 안에 있는 `neuronbot2_world.launch.py`라는 런치 파일을 실행한다. 하지만 가제보 클라이언트(gzclient) 쪽에서 에러가 발생해 프로세스가 중단된 것을 확인할 수 있다.
 
 <br>
 
