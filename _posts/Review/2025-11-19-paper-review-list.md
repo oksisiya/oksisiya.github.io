@@ -6,4 +6,10 @@ categories: [Review]
 
 ## 2025.11. ~
 
-- [ ] DexterityGen: Foundation Controller for Unprecedented Dexterity
+- [ ] DexDiffuser: Generating Dexterous Grasps With Diffusion Models
+- [ ] DexterityGen: Foundation Controller for Unprecedented Dexterity 🏃
+
+
+<br>
+
+---
