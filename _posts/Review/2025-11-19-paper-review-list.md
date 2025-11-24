@@ -6,6 +6,9 @@ categories: [Review]
 
 ## 2025.11. ~
 
+
+- [ ] An Introduction to Flow Matching and Diffusion Models 🏃
+
 - [ ] DexDiffuser: Generating Dexterous Grasps With Diffusion Models
 - [ ] DexterityGen: Foundation Controller for Unprecedented Dexterity 🏃
 
