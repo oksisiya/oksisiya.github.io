@@ -38,6 +38,50 @@ Demonstrate that DexDiffuser consistently outperforms the state-of-the-art multi
 
 <br>
 
+## Introduction
+
+<br>
+
+**Generating Dexterous Grasps**
+* 데이터 기반 파지(data-driven grasping)에 대한 수년간의 연구에도 불구하고, 알려지지 않은 물체를 집기 위한 섬세한 파지(dexterous grasps)를 생성하는 것은 여전히 어려운 과제이다.
+* Dexterous grasping의 주요 과제 중 하나는 고차원의 탐색 공간(high-dimensional search space)에서 성공적인 파지를 식별하는(identifying) 것이다.
+
+<br>
+
+**DexDiffuser**
+* 본 논문에서는 차원 문제(dimensionality issue)를 해결하기 위해 데이터 기반 섬세한 파지 기법(data-driven dexterous grasping method)인 DexDiffuser를 제안한다.
+* DexDiffuser는 DexSampler와 DexEvaluator를 포함한다.
+    * **DexSampler**: a new conditional diffusion-based dexterous grasp sampler
+    * **DexEvaluator**: a new dexterous grasp evaluator
+
+<br>
+
+**DexSampler**
+
+DexSampler는 객체 포인트 클라우드(object point clouds)를 조건으로 무작위로 샘플링된 파지의 노이즈를 반복적으로 제거해 고품질 파지를 생성한다.
+
+<br>
+
+**Train the Models**
+
+<br>
+
+**Two Grasp Refinement Strategies**
+
+본 논문에서는 DexDiffuser와 함께 두 가지의 파지 개선(grasp refinement) 기법을 제안한다.
+* **Evaluator-Guided Diffusion (EGD)**: only applicable for diffusion models
+* **Evaluator-based Sampling Refinement (ESR)**: applies to all dexterous grasp sampling methods
+
+<br>
+
+## Related Work
+
+<br>
+
+본 논문에서는 <u>1) 데이터 기반 섬세한 파지(data-driven dexterous grasping)</u>와 2) 로보틱스 분야에서의 확산 모델(diffusion model to robotics) 두 가지 주제를 다룬다.
+
+<br>
+
 ## Conclusion
 
 <br>
