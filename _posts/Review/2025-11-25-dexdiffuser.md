@@ -74,11 +74,16 @@ DexSampler는 객체 포인트 클라우드(object point clouds)를 조건으로
 
 <br>
 
-## Related Work
+## Method
 
 <br>
 
-본 논문에서는 <u>1) 데이터 기반 섬세한 파지(data-driven dexterous grasping)</u>와 2) 로보틱스 분야에서의 확산 모델(diffusion model to robotics) 두 가지 주제를 다룬다.
+#### The Basis Point Set Representation
+
+<br>
+
+**Basis Point Set (BPS)**
+* BPS 
 
 <br>
 
