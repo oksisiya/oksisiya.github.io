@@ -1,5 +1,5 @@
 ---
-title: "Isaac Lab 설치 (Recommended)"
+title: "Isaac Lab 설치 (Isaac Sim pip 패키지 사용)"
 date: 2025-12-04 12:26:00 +0900
 categories: [Isaac]
 ---
@@ -8,15 +8,23 @@ categories: [Isaac]
 
 &nbsp;
 
-Isaac Lab은 Isaac Sim을 기반으로 로봇 연구(RL, learning from demonstrations, motion planning 등)에 최적화된 시뮬레이션 플랫폼이다. 특히 강화학습에 최적화된 구조와 도구들을 제공해 복잡한 로봇 학습을 효율적으로 수행할 수 있게 한다.
+## Isaac Lab
 
 <br>
 
-## **Installing Isaac Sim**
+Isaac Lab은 Isaac Sim을 기반으로 하는 로봇 연구(RL, learning from demonstrations, motion planning 등)에 최적화된 시뮬레이션 플랫폼이다. 특히 강화학습에 최적화된 도구들을 제공해 복잡한 로봇 학습을 효율적으로 수행할 수 있게 한다.
 
 <br>
 
-Isaac Sim을 설치하는 방법은 크게 두 가지가 있다.
+![Isaac Lab Ecosystem](/assets/img/2025-12-04/ecosystem-light.jpg)
+
+<br>
+
+이번 포스팅에서는 Isaac Sim을 설치하는 방법과 Isaac Lab을 설치하는 방법을 차례로 다룬다.
+
+<br>
+
+시작하기에 앞서 Isaac Sim을 설치하는 방법은 크게 두 가지가 있다.
 
 * 압축 파일 다운로드/해제 ([관련 링크](<https://docs.isaacsim.omniverse.nvidia.com/5.0.0/installation/download.html>))
     * Isaac Sim이 특정 폴더에 독립적으로 설치되며 일반적인 애플리케이션처럼 쉽게 실행한다.
@@ -30,11 +38,19 @@ Isaac Sim을 설치하는 방법은 크게 두 가지가 있다.
 
 <br>
 
-처음 접했을 때는 Omniverse Launcher를 통해 Isaac Sim을 사용했고 최근에는 첫 번째 방법으로 설치해서 Isaac Sim을 사용하려고 했다. 시뮬레이터에서 제공하는 예제가 잘 실행되고 렌더링도 깔끔해서 문제가 없다고 생각했는데 어제 `. ~/isaac-sim/python.sh <파일 이름>` 명령어로 파일을 실행하려고 하니 어떠한 에러 메시지도 뜨지 않은 채 쉘이 종료되는 문제를 겪었다. 오늘 아침까지 원인을 찾다가 포기하고 두 번째 방법으로 다시 설치해서 사용 중인데 문제도 없고 첫 번째 방법보다 사용하기 더 깔끔한 것 같다. 논문마다 Python 버전이나 CUDA 버전이 다른데 각각에 맞는 Isaac Sim 버전을 맞추기도 편해서 두 번째 방법을 추천한다.
+최근에 첫 번째 방법으로 Isaac Sim을 설치했는데 `. ~/isaac-sim/python.sh file_name.py` 명령어로 스크립트 파일을 실행하려고 할 때마다 어떠한 에러 메시지도 뜨지 않은 채 터미널이 종료되는 문제를 겪었다. 오늘 아침까지 원인을 찾다가 결국 포기하고 두 번째 방법으로 다시 설치해서 사용하고 있다.
 
 <br>
 
-#### **Preparing a Python Environment**
+두 가지 방법을 모두 시도해 본 입장에서 두 번째 방법이 더 깔끔하다고 느꼈다. 논문마다 사용한 Python 버전과 CUDA 버전이 다른데 각각에 맞는 Isaac Sim 버전을 맞출 수 있어서 실험 환경을 구축할 때 특히 편할 것 같다.
+
+<br>
+
+## Installing Isaac Sim
+
+<br>
+
+#### Preparing a Python Environment
 
 <br>
 
@@ -49,7 +65,7 @@ conda activate env_isaaclab
 
 <br>
 
-* Ensure the latest pip version is installed
+* Run the following command from inside the virtual environment
 
 ```bash
 # [Linux]
@@ -59,7 +75,7 @@ pip install --upgrade pip
 
 <br>
 
-#### **Installing Dependencies**
+#### Installing Dependencies
 
 <br>
 
@@ -74,12 +90,18 @@ pip install "isaacsim[all,extscache]==5.1.0" --extra-index-url https://pypi.nvid
 * Install a CUDA-enabled PyTorch build that matches your system architecture
 
 ```bash
+# [Linux (x86_64)]
+
 pip install -U torch==2.7.0 torchvision==0.22.0 --index-url https://download.pytorch.org/whl/cu128
 ```
 
 <br>
 
-#### **Verifying the Isaac Sim Installation**
+#### Verifying the Isaac Sim Installation
+
+<br>
+
+* Make sure that your virtual environment is <u>activated</u>
 
 <br>
 
@@ -87,16 +109,22 @@ pip install -U torch==2.7.0 torchvision==0.22.0 --index-url https://download.pyt
 
 ```bash
 isaacsim
+```
 
-# 최초 실행 시 Nvidia Omniverse 라이선스에 동의하냐는 메시지가 표시되는데 예(yes)라고 답한다.
+<br>
+
+* (The first run) reply `Yes` when prompted with the below message
+
+```bash
 By installing or using Isaac Sim, I agree to the terms of NVIDIA OMNIVERSE LICENSE AGREEMENT (EULA)
 in https://docs.isaacsim.omniverse.nvidia.com/latest/common/NVIDIA_Omniverse_License_Agreement.html
 
 Do you accept the EULA? (Yes/No): Yes
 ```
+
 <br>
 
-Window > Examples > Robotics Examples > MANIPULATION > Follow Target 예제를 실행해 보면 
+시뮬레이터가 정상적으로 실행되는 것을 확인할 수 있다. 아래 그림은 Robotics Examples 중 Follow Target 예제를 실행한 화면이다.
 
 <br>
 
@@ -104,11 +132,11 @@ Window > Examples > Robotics Examples > MANIPULATION > Follow Target 예제를 �
 
 <br>
 
-## **Installing Isaac Lab**
+## Installing Isaac Lab
 
 <br>
 
-#### **Cloning Isaac Lab**
+#### Cloning Isaac Lab
 
 <br>
 
@@ -122,7 +150,7 @@ git clone https://github.com/isaac-sim/IsaacLab.git
 
 <br>
 
-#### **Installation**
+#### Installation
 
 <br>
 
@@ -144,7 +172,7 @@ sudo apt install cmake build-essential
 
 <br>
 
-#### **Verifying the Isaac Lab Installation**
+#### Verifying the Isaac Lab Installation
 
 <br>
 
@@ -153,12 +181,17 @@ sudo apt install cmake build-essential
 ```bash
 # [Linux]
 
+# Option 1: Using the isaaclab.sh executable
+# note: this works for both the bundled python and the virtual environment
 ./isaaclab.sh -p scripts/tutorials/00_sim/create_empty.py
+
+# Option 2: Using python in your virtual environment
+python scripts/tutorials/00_sim/create_empty.py
 ```
 
 <br>
 
-시뮬레이션이 실행되고 검은색 뷰포트(viewport)가 있는 창이 표시되는 걸 확인할 수 있다.
+시뮬레이션이 실행되고 검은색 뷰포트(viewport) 창이 표시되는 걸 확인할 수 있다.
 
 <br>
 
@@ -166,7 +199,7 @@ sudo apt install cmake build-essential
 
 <br>
 
-`Ctrl + C`를 눌러 스크립트를 종료한다.
+`Ctrl + C`를 실행해 스크립트를 종료한다.
 
 <br>
 
