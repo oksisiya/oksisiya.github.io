@@ -1,7 +1,7 @@
 ---
-title: "Isaac Lab 설치 (Isaac Sim pip 패키지 사용)(Recommended)"
+title: "Isaac Lab 설치 (Recommended)"
 date: 2025-12-04 12:26:00 +0900
-categories: [IsaacSim]
+categories: [Isaac]
 ---
 
 ---

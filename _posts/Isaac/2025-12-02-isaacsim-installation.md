@@ -1,7 +1,7 @@
 ---
 title: "Isaac Sim 설치 (4.5.0 버전 기준)"
 date: 2025-12-02 15:47:00 +0900
-categories: [IsaacSim]
+categories: [Isaac]
 ---
 
 &nbsp;
