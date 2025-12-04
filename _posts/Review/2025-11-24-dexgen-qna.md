@@ -79,6 +79,14 @@ A4. 사람이 제공한 거친 명령을 안전하고 정밀한 행동으로 변
 
 <br>
 
++) Haptic 장치 없이도 물체와 상호작용 할 수 있게 보조 (왼쪽: Teleop, 오른쪽: Teleop + DexGen)
+
+<br>
+
+![Teleoperation](/assets/img/2025-11-19-dexgen/teleop.gif)|![Teleoperation + DexGen](/assets/img/2025-11-19-dexgen/teleop+dexgen.gif)
+
+<br>
+
 ## **Q5. 각 task에 mode conditioning / motion conditioning 은 어떻게 입력되는가?**
 
 <br>
@@ -95,10 +103,6 @@ A6. 입력으로 들어온 동작 명령과 DexGen이 출력한 행동 사이의
 <center>$\mathrm{Dist}(\Delta x, \Delta x_{\text{input}}) = \sum_{i=1}^{T} \|\Delta x_i - \Delta x_{\text{input}}\|^2$</center>
 
 * (The DexGen Controller에서) 위 함수는 **generated future fingertip position이 commanded fingertip position과 매우 가깝게 일치하도록 유도**한다. (☞ The above function <span style="color:blue">encourages the generated future fingertip position to closely match the commanded fingertip position</span>.)
-
-<br>
-
-![Teleoperation](/assets/img/2025-11-19-dexgen/teleop.gif)|![Teleoperation + DexGen](/assets/img/2025-11-19-dexgen/teleop+dexgen.gif)
 
 <br>
 
