@@ -332,6 +332,79 @@ True
 
 <br>
 
+
+
+## [12/10] 다시 환경 구성
+
+<br>
+
+* `conda create -n dexdiff2 python=3.9`
+
+* `conda activate dexdiff2`
+
+* `conda install nvidia::cuda==12.8.0`
+(https://anaconda.org/channels/nvidia/packages/cuda/overview)
+
+* `pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128`
+(https://github.com/facebookresearch/pytorch3d/issues/1962)
+
+* `pip install --extra-index-url https://miropsota.github.io/torch_packages_builder pytorch3d==0.7.9+pt2.8.0cu128`
+
+* `pip install git+https://github.com/otaheri/chamfer_distance`
+
+* `pip install git+https://github.com/otaheri/bps_torch`
+
+* `pip install omegaconf einops urdf-parser-py hydra-core loguru plotly tqdm transformations trimesh matplotlib pyrender tensorboard tqdm transforms3d`
+
+* `pip install pytorch_kinematics`
+
+* `pip install flask`
+
+<br>
+
+```bash
+# python --version
+Python 3.9.25
+
+# nvcc --version
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+
+# python -c "import torch; print(torch.cuda.is_available()); print(torch.version.cuda)"
+True
+12.8
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
 ## Train
 
 * Train the sampler
