@@ -1,17 +1,13 @@
 ---
-title: "DexDiffuser hand model 불러오기"
+title: "[12월 2주차] 파지 모델 불러오기 (with DexDiffuser)"
 date: 2025-12-05 13:38:00 +0900
-categories: [Project]
+categories: [Report]
 ---
-
 ---
-
-<br>
 
 ## DexDiffusion GitHub
 
 * <https://github.com/YuLiHN/DexDiffuser>
-
 * `git clone https://github.com/YuLiHN/DexDiffuser.git`
 
 <br>
@@ -251,7 +247,15 @@ categories: [Project]
 
 <br>
 
-## Installation
+> ## [25/12/08] DexDiffuser 환경 구축 [✗]
+> * README.md에 명시된 대로 dexdiff 환경 구성
+> * dexdiff 환경에 설치된 PyTorch 버전과 시스템 GPU 버전이 호환되지 않아 CUDA 에러 발생
+
+<br>
+
+#### Installation
+
+<br>
 
 * Create a conda environment
     * `conda create -n dexdiff python=3.8`
@@ -302,7 +306,9 @@ True
 
 <br>
 
-## Checkpoints & Data
+#### Checkpoints & Data
+
+<br>
 
 * Checkpoints for sampler and evaluator
     * `ckpts` 폴더 생성
@@ -332,9 +338,16 @@ True
 
 <br>
 
+#### Error
 
+<br>
 
-## [12/10] 다시 환경 구성
+> ## [25/12/10] DexDiffuser 환경 구축 [✓]
+> * 
+
+<br>
+
+#### Installation
 
 <br>
 
@@ -343,10 +356,10 @@ True
 * `conda activate dexdiff2`
 
 * `conda install nvidia::cuda==12.8.0`
-(https://anaconda.org/channels/nvidia/packages/cuda/overview)
+(참고: https://anaconda.org/channels/nvidia/packages/cuda/overview)
 
 * `pip install torch==2.8.0 torchvision==0.23.0 torchaudio==2.8.0 --index-url https://download.pytorch.org/whl/cu128`
-(https://github.com/facebookresearch/pytorch3d/issues/1962)
+(참고: https://github.com/facebookresearch/pytorch3d/issues/1962)
 
 * `pip install --extra-index-url https://miropsota.github.io/torch_packages_builder pytorch3d==0.7.9+pt2.8.0cu128`
 
