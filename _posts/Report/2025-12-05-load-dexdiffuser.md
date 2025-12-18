@@ -107,6 +107,10 @@ True
 
 <br>
 
+![Error](/assets/img/2025-12-05/error.png)
+
+<br>
+
 > ## [25/12/10] DexDiffuser 환경 구축 [✓]
 > * 시스템 GPU 버전에 맞춰 dexdiff2 환경 구성 (Python: 3.9 / Torch: 2.8.0 / CUDA: 12.8)
 > * (학습 중) (20/200 Epoch)
@@ -159,36 +163,17 @@ True
 
 <br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#### Train
 
 <br>
-
-
-## Train
 
 * Train the sampler
 
     `bash scprits/train_sampler.sh`
+
+<br>
+
+![Train](/assets/img/2025-12-05/train.png)
 
 <br>
 
