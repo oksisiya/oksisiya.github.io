@@ -16,7 +16,7 @@ timezone: Asia/Seoul
 
 title: Suyeon Oh # the main title
 
-tagline: ... # it will display as the subtitle
+tagline: 헤맨 만큼 내 땅 # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
   오수연의 열공 블로그
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: "/assets/img/oksisiya.jpg"
+avatar: "/assets/img/125956492.png"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
