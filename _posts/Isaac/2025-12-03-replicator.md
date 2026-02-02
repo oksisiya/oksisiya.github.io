@@ -12,11 +12,12 @@ categories: [Isaac]
 
 <br>
 
-Replicator는 Isaac Sim에서 합성 데이터를 생성하기 위한 프레임워크이다. 도메인 랜덤화를 통해 수천 장의 학습 데이터를 자동으로 생성할 수 있다.
+* Isaac Sim에서 합성 데이터를 생성하기 위한 프레임워크
+* 도메인 랜덤화를 통해 수천 장의 학습 데이터를 자동으로 생성할 수 있음
 
 <br>
 
-#### Import Libraries
+#### 라이브러리
 
 <br>
 
@@ -29,9 +30,12 @@ from pxr import Sdf, UsdGeom
 
 <br>
 
-* `import omni.replicator.core as rep`: Replicator의 main API.
+* `import omni.replicator.core as rep`
+    * Replicator의 메인 API
 
-* `add_update_semantics`: 객체의 semantic 레이블을 추가하는 함수. Segmentation mask 생성에 반드시 필요하다.
+* `add_update_semantics`
+    * 객체의 semantic 레이블을 추가하는 함수
+    * Segmentation mask 생성에 반드시 필요함
 
 <br>
 
@@ -50,9 +54,9 @@ rep.orchestrator.set_capture_on_play(False)
 
 <br>
 
-이 코드는 새로운 usd stage를 생성하는 것이다.
-
-* `set_capture_on_play()`: 자동 캡처를 끄고 수동으로 제어한다. 이렇게 하면 정확한 타이밍에 데이터를 생성할 수 있다.
+* `set_capture_on_play()`
+    * 자동 캡처를 끄고 수동으로 제어
+    * 정확한 타이밍에 데이터 생성 가능
 
 <br>
 
