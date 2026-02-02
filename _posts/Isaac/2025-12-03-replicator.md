@@ -1,5 +1,5 @@
 ---
-title: "Isaac Sim Replicator의 개념과 사용"
+title: "Isaac Sim Replicator"
 date: 2025-12-03 11:42:00 +0900
 categories: [Isaac]
 ---
