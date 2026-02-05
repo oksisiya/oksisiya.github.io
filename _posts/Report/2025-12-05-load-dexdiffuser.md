@@ -3,7 +3,7 @@ title: "[12월 2주차] 파지 모델 불러오기 (with DexDiffuser)"
 date: 2025-12-05 13:38:00 +0900
 categories: [Report]
 
-published: false
+published: true
 ---
 ---
 
