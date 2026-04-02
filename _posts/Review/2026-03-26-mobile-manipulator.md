@@ -33,5 +33,5 @@ use_math: true
 #### Mobile ALOHA: Learning Bimanual Mobile Manipulation with Low-Cost Whole-Body Teleoperation
 
 - CoRL (2024)
-- <https://openreview.net/pdf?id=FO6tePGRZj>
+- <https://arxiv.org/pdf/2401.02117j>
 - Mobile ALOHA는 저비용 전신 원격 제어 시스템으로, 기존 ALOHA에 이동형 베이스를 결합해 복잡한 양팔 작업을 가능하게 함. 50회의 시연 데이터와 기존 데이터의 공동 학습을 통해 새우 요리, 엘리베이터 탑승 등 고난도 이동 조작 과제에서 최대 90%의 성공률을 달성.
