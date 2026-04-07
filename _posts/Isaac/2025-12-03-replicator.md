@@ -2,6 +2,9 @@
 title: "Isaac Sim Replicator"
 date: 2025-12-03 11:42:00 +0900
 categories: [Isaac]
+
+published: false
+use_math: true
 ---
 
 ---
